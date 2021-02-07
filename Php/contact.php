@@ -141,5 +141,4 @@ if (isset($_POST['envoye']))
     </form>
    </div>
 </form>
-</body>
-</html>
+<?php require"footer.php"?>

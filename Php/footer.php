@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../Css/style.css">
-    <title>test footer</title>
-  </head>
-  <body>
-
         <footer>
         <div class="bande">
             <div class="icone"><img src="../img/camion.png" width="100px" height="100px">
