@@ -5,11 +5,18 @@ header{
 }
 
 .logo{
-
   padding-bottom: 5%;
 }
 
+.bouton{
+  padding: 5px;
+  background: rgba(0, 175, 196,1);
+  float: right;
+  font-family: arial;
+  margin:10px;
+  border-radius: 20px
 
+}
 /*Menu déroulant*/
 
 nav{
