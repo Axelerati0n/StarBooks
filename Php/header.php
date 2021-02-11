@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="../Css/style.css">
   <link rel="shortcut icon" type="image/png" href="../img/logo.png">
-  <?php require"Config.php"?>
+  <?php require "Config.php"?>
   <title>StarBooks</title>
 </head>
 
