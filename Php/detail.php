@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="..\style\biblioteque.css">
-</head>
-<body>
-	
-<?php require "config.php";?>
- <?php 
+<?php require "header.php";
  $isbn = $_GET['isbn'];
  $link = mysqli_connect($HOST, $user, $password, $database);
  if(!$link){
