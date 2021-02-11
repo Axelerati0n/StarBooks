@@ -18,7 +18,9 @@ header{
   font-family: arial;
   margin:10px;
   border-radius: 20px
-
+}
+.bouton:hover{
+  text-decoration: underline double;
 }
 /*Menu déroulant*/
 .navigation{
@@ -180,13 +182,36 @@ a{
   margin: 5000px 20px;
   height: 50px;
 }
+.marge{
+  margin: 5000px 20px;
+  height: 50px;
+}
+/*Genre*/
+.amour{
+  background-image: url(../img/amour.PNG);
+}.aventure{
+  background-image: url(../img/aventure.PNG);
+}.fantastique{
+  background-image: url(../img/fantastique.PNG);
+}.horreur{
+  background-image: url(../img/horreur.PNG);
+}.policier{
+  background-image: url(../img/policier.PNG);
+}.manga{
+  background-image: url(../img/manga.PNG);
+}.mythologie{
+  background-image: url(../img/mythologie.PNG);
+}.science{
+  background-image: url(../img/science.PNG);
+}
+.bonsoir{
+  float: left;
+}
 .coucou{
   padding-top: 250px;
   display: grid;
   grid-template-columns: 20% 25% 25% 25%;
   height: 550px;
-
-
 }
 .coucou > div{   /*ajout sur toutes les box dans livre*/
   border-radius: 5px;
