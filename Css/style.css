@@ -1,4 +1,6 @@
-
+body{
+   background:   #e2e9e2;
+}
 header{
   background: rgba(6,90,43,255);
 
@@ -82,7 +84,7 @@ nav > ul li:hover .sous{
 /*decoration du sous menu au passage de la souris */
 .sous a:hover{
   border-bottom: none;
-  background-color: RGBa(200,200,200,0.1);
+  background-color: rgba(200,200,200,0.1);
   text-decoration: underline;
 }
 /*ajout d'un caractere custom pour le premier menu*/
@@ -100,11 +102,11 @@ padding-top: 200px;
     font-family: Avenir, sans-serif;
 }
 footer{
-    background:darkgreen;
+    background:rgba(6,90,43,255)  ;
     position:absolute;
-    bottom:0px;
-    width:100%;
     padding:30px 0 50px 0;
+   
+    width:100%;
     height: auto;
 }
 .icone{
@@ -146,7 +148,7 @@ a{
 }
 .bande{
     width: 100%;
-    background-color: rgb(39, 129, 39);
+    background-color: #aabbaa;
     height: 200px;
     margin-bottom: 20px;
 }
@@ -157,3 +159,40 @@ a{
     background-color: green;
     height: auto;
 }*/
+/*t loin mec de page*/
+#scroll_to_top {
+  position: fixed;
+  width: 8%;
+  height: auto;
+  bottom: 50px;
+  right: 30px;
+  background-color: lightgreen;
+  padding: 5px ;
+  text-align: center;
+  border: 2mm ridge rgb(54, 128, 91);
+  font-family: cursive;
+  font-size: large ;
+  color: rgb(39, 129, 39);
+}
+.scroll_to_top :hover{
+  text-decoration: underline;
+}  .marge{
+  margin: 5000px 20px;
+  height: 50px;
+}
+.coucou{
+  padding-top: 250px;
+  display: grid;
+  grid-template-columns: 20% 25% 25% 25%;
+  height: 550px;
+
+
+}
+.coucou > div{   /*ajout sur toutes les box dans livre*/
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #aabbaa;
+  border:2mm ridge rgb(54, 128, 91);
+  color:yellow;
+   margin: 2em 2em 2em;
+}

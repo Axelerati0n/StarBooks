@@ -1,4 +1,7 @@
         <footer>
+            <div class="scroll_to_top">
+      <a href="#top"><p id="scroll_to_top">Haut de page</p></a>
+    </div>
         <div class="bande">
             <div class="icone"><img src="../img/camion.png" width="100px" height="100px">
             <h4><strong>Une livraison rapide et gratuite</strong></h4><p>sans minimum d'achat</p></div>
