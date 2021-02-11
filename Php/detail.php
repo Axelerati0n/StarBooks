@@ -14,7 +14,6 @@ if ($result) {
 		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 			echo "<a href='" . $CONFIG['root_path'] . "bibliotheque.php'><div><img src='" . $CONFIG['root_path'] . "img\Image1.jpg' id='logo'></a>";
 			echo "<h1 class='Titre'><font color='white'>" . $row['titre'] . "</h1></div>";
-			require "nav.php";
 			echo "<ul>";
 				echo "<div class='cali'>";
 					echo "<div><img src='" . $CONFIG['root_path'] . "img/" . $row["isbn"] . ".jpg'  alt='' class='L'><div align='center'>";
