@@ -37,7 +37,7 @@
                             <ul classe="secon">
                                 <a href="#"><li class="pop">Cookies</li></a>
                                 <a href="#"><li class="pop">Politique de confidentialité</li></a>
-                                <a href="#"><li class="pop">Politique de protection des données personnelles</li></a>
+                                <a href="politique.php"><li class="pop">Politique de protection des données personnelles</li></a>
                             </ul>
                     </section>
                     <section class="liens">
