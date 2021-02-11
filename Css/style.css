@@ -5,6 +5,28 @@ header{
   background: rgba(6,90,43,255);
 
 }
+.gril{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr  ;
+  grid-gap: 20px;
+  padding-top: 250px;
+  }
+.img{
+    width:60%;
+    height: 100%;
+    float:left;
+    border-radius: 10px;
+}
+.ca{
+    width: 250px;
+  height: 400px;
+    border-radius: 5px;
+  padding: 10px;
+  background-color: #aabbaa;
+  border:2mm ridge rgb(54, 128, 91);
+  color:yellow;
+   margin: 2em 2em 2em;
+}
 
 .logo{
   z-index: 10001;
