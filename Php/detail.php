@@ -1,4 +1,5 @@
 <?php require "header.php";
+require "genre.php";
  $isbn = $_GET['isbn'];
  $link = mysqli_connect($HOST, $user, $password, $database);
  if(!$link){
