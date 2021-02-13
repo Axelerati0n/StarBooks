@@ -1,3 +1,4 @@
+      <div class="marge2"></div>
         <footer>
             <div class="scroll_to_top">
       <a href="#top"><p id="scroll_to_top">Haut de page</p></a>
