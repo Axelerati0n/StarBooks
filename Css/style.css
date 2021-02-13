@@ -126,11 +126,10 @@ padding-top: 200px;
     font-family: Avenir, sans-serif;
 }
 footer{
-    background:rgba(6,90,43,255)  ;
+    background-color:darkgreen;
     position:absolute;
-    padding:30px 0 50px 0;
-   
     width:100%;
+    padding:30px 0 50px 0;
     height: auto;
 }
 .icone{
@@ -163,7 +162,7 @@ a{
     margin-bottom: 10px;
 }
 .liens{
-    margin: 20px 0 10px 150px;
+    margin: 20px 0 15px 150px;
     height: 150px;
     padding: 3px;
     width: 12.5%;
@@ -183,7 +182,7 @@ a{
     background-color: green;
     height: auto;
 }*/
-/*t loin mec de page*/
+/*haut de page*/
 #scroll_to_top {
   position: fixed;
   width: 8%;
@@ -200,34 +199,157 @@ a{
 }
 .scroll_to_top :hover{
   text-decoration: underline;
-}  .marge{
-  margin: 5000px 20px;
-  height: 50px;
-}
+}  
 .marge{
-  margin: 5000px 20px;
-  height: 50px;
+  height: 200px;
 }
 /*Genre*/
-.amour{
-  background-image: url(../img/amour.PNG);
-}.aventure{
-  background-image: url(../img/aventure.PNG);
+.bd{
+  background-image: url(../img/fonds/bd.PNG);
+  width: 39.5%;
+  text-align: center;
+  float: right;
+  padding: 25px 0;
+  margin-right: 9.5%;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
+}
+.aventure{
+  background-image: url(../img/fonds/aventure.PNG);
+  width: 39.5%;
+  text-align: center;
+  float: left;
+  padding: 25px 0;
+  margin-left: 9.5%;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
+
 }.fantastique{
-  background-image: url(../img/fantastique.PNG);
+  background-image: url(../img/fonds/fantastique.PNG);
+  width: 39.5%;
+  text-align: center;
+  padding: 25px 0;
+  margin-left: 9.5%;
+  float: left;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
 }.horreur{
-  background-image: url(../img/horreur.PNG);
-}.policier{
-  background-image: url(../img/policier.PNG);
+  background-image: url(../img/fonds/horreur.PNG);
+  width: 39.5%;
+  text-align: center;
+  float: right;
+  padding: 25px 0;
+  margin-right: 9.5%;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
+}.medieval{
+  background-image: url(../img/fonds/medieval.PNG);
+  width: 39.5%;
+  text-align: center;
+  padding: 25px 0;
+  margin-right: 9.5%;
+  float: right;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
 }.manga{
-  background-image: url(../img/manga.PNG);
+  background-image: url(../img/fonds/manga.PNG);
+  width: 39.5%;
+  text-align: center;
+  float: left;
+  padding: 25px 0;
+  margin-left: 9.5%;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
 }.mythologie{
-  background-image: url(../img/mythologie.PNG);
+  background-image: url(../img/fonds/mythologie.PNG);
+  width: 39.5%;
+  text-align: center;
+  padding: 25px 0;
+  margin-left: 9.5%;
+  margin-bottom: 10%;
+  float: left;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border-left: 2mm ridge rgb(54, 128, 91);
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
+
 }.science{
-  background-image: url(../img/science.PNG);
+  background-image: url(../img/fonds/science.PNG);
+  width: 39.5%;
+  text-align: center;
+  float: right;
+  padding: 25px 0;
+  margin-right: 9.5%;
+  margin-bottom: 10%;
+  text-shadow: lightgreen 0 0 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border-right: 2mm ridge rgb(54, 128, 91);
+  border: 2mm ridge rgb(54, 128, 91);
+  color: lightgreen;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: darkgreen;
+  font-size: xx-large;
+}
+.yoyo{
+  text-align: center;
+  margin: 50px 9.5% 0 9.5%;
+  text-decoration: underline double;
+  font-weight: 900;
+  letter-spacing: 1px;
+  width: 80%;
+  border: 2mm ridge rgb(54, 128, 91);
+  background-color: lightgreen;
+  padding-bottom: 10px;
+  color: rgb(39, 129, 39);
+  
 }
 .bonsoir{
-  float: left;
+  list-style: none;
+}
+.marge2{
+  margin-top: 500px;
 }
 .coucou{
   padding-top: 250px;
