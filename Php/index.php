@@ -1,5 +1,6 @@
 
-<?php require"header.php"?>
+<?php require "header.php";
+	require "genre.php";?>
 
 
 <div class="coucou">
@@ -8,4 +9,4 @@
 </div>
 
 
-<?php require"footer.php"?>
+<?php require "footer.php"?>
