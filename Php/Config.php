@@ -2,7 +2,7 @@
 $CONFIG=array("root_path"=>"/StarBooks/");
 $user = 'root';
 $password = '';
-$database = 'bibliotheque';
+$database = 'starbooks';
 $port = NULL;
 $HOST = "localhost";
 ?>

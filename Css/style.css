@@ -351,17 +351,3 @@ a{
 .marge2{
   margin-top: 500px;
 }
-.coucou{
-  padding-top: 250px;
-  display: grid;
-  grid-template-columns: 20% 25% 25% 25%;
-  height: 550px;
-}
-.coucou > div{   /*ajout sur toutes les box dans livre*/
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #aabbaa;
-  border:2mm ridge rgb(54, 128, 91);
-  color:yellow;
-   margin: 2em 2em 2em;
-}
