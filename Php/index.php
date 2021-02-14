@@ -51,9 +51,9 @@ if ($req) {
 		echo "</ul>";
 	}
 }
-echo "</div";
+echo "</div>";
 
 
 
 require "footer.php"?>
-</body>
+
