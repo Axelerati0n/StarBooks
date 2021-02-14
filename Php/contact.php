@@ -1,5 +1,11 @@
 <?php require"header.php"?>
+<div class='grilContact'>
+
+
 <?php
+
+
+
 /* Si le formulaire est envoyé alors on fait les traitements */
 if (isset($_POST['envoye']))
 {
@@ -95,33 +101,31 @@ if (isset($_POST['envoye']))
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
+
     <meta charset="utf-8">
       <link rel="stylesheet" href="..\style\biblioteque.css">
-</head>
-<body>
-   <div class="Contact">
+
+   <div>
   <header>
-    <h1 align="center"><font color=" white">Nous contacter</font></h1>
+    <h1 align="center"><font color="white">Nous contacter</font></h1>
   </header>
- 
     <form method="post" action="receive.php">
-      <fieldset>
-        <fieldset>
-        	<legend><font color=" white">Informations sur le client</font></legend>
+      <div class='orga'>
+          <div class="infos">
+        	<legend class="style"><font color="white">Informations sur le client :</font></legend><br>
+        
         	<label for="name"><font color=" white">Nom :</font></label>
         	<input type="text" id="name" name="client_name" autofocus required><br>
-          <br>
        	 	<label for="mail"><font color=" white">Courriel :</font></label>
        		 <input type="email" id="mail" required name="client_mail"><br>
-        </fieldset>
-        <fieldset>
-        <label for="duration"><font color=" white">Votre livre préférée:</font></label>
+   </div>
+
+ </div>
+        <div class="infos">
+        <label for="duration"><font color=" white" class="style">Votre livre préférée:</font></label><br>
         <select name="duration" required>
         	<option value="livre1">Percy Jackson:Le voleur de foudre</option>
-        	<option value="livre2">Percy Jackson:La merdes monstres</option>
+        	<option value="livre2">Percy Jackson:La mer des monstres</option>
         	<option value="livre3">La mal&eacute;diction d'Oedipe</option>
           <option value="livre4">Achille,la naissance d'un h&eacute;ro</option>
           <option value="livre5">D&eacute;dale et Icare</option>
@@ -130,15 +134,19 @@ if (isset($_POST['envoye']))
           <option value="livre8">Jason et la Toison d'or</option>
           <option value="livre9">L'Odyss&eacute;e</option>
           <option value="livre10">L'Illiade,la pomme de la discorde</option>
-        </select><br>
-        <label for="addreq"><font color=" white">Vos avis</font></label><br>
-        <textarea id="addreq"name="client_addreq" placeholder="Votre message"></textarea>
-      </fieldset>
+        </select><br><br>
 
+
+        <label for="addreq"><font color=" white">Vos avis :</font></label><br>
+        <textarea id="addreq"name="client_addreq" placeholder="Votre message"></textarea><br><br>
         <button type="reset">Tout effacer</button>
         <button type="submit">Valider</button>
-      </fieldset>
-    </form>
-   </div>
+      </div>
+      <br>
+   <div class="infos">
+   <img src="../img/devigual.jpg" class="logodev" align="center">
+ </div><br>
+</div>
 </form>
+</div>
 <?php require"footer.php"?>

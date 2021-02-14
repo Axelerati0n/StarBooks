@@ -1,6 +1,8 @@
 
 <?php require "header.php";
- require "genre.php";?>
+require "config.php"?>
+
+	<?php require "genre.php";?>
 	<form name="form" action="" method="post">
 	<fieldset class="submit">
        	<input  name="trie" type="submit" value="decroisant">
@@ -18,18 +20,18 @@ if (empty($_POST['search'])) {$search=NULL;
 }
 if (empty($tri)) {
 	if (empty($search)) { // si la barre de recherceh ne contien rien 
-		$sql = " SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne";/* a changer le nom de la table */
+		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne";/* a changer le nom de la table */
    	}else {/* si la barre de recherche contien des chose  */
-		$sql = " SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne WHERE titre LIKE '%$search%' or prenom LIKE '%$search%' or annee LIKE '%$search%'; ";
+		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne WHERE titre LIKE '%$search%' or prenom LIKE '%$search%' or annee LIKE '%$search%'; ";
 	}
 			//$sql = " SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne JOIN genre g ON g.id = livre.genre  ORDER BY genre;"; // requete pour trier par genre a changer
 }else{
 	switch ($tri) {
 	case 'croissant':
-		$sql ='SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre ASC;';// requete pour tier par ordre  croisant des titre
+		$sql ='SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre ASC;';// requete pour tier par ordre  croisant des titre
 		break;
 	case 'decroisant':
-		$sql = ' SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre DESC;';// requete pour trier par ordre decroisant 
+		$sql = ' SELECT isbn,titre FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre DESC;';// requete pour trier par ordre decroisant 
 		break;
 	}
 }
@@ -44,16 +46,12 @@ if ($req) {
 	while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
 		echo "<ul>";
 			 echo "<div class='ca'>";
-		  		 	echo "<a href='detail.php?isbn=" . $data['isbn'] . "'><div><img src='../img/Livres/" . $data["isbn"] . ".jpg' class='img'alt=''></a><div align='center'>";
+		  		 	echo "<a href='detail.php?isbn=" . $data['isbn'] . "'><img src='../img/Livres/" . $data["isbn"] . ".jpg' class='img'alt=''></a><div align='center'>";
 		  		 	echo "<p class='pc'>Titre : " . $data["titre"] . "</p>";
-					echo "</div></div>";
+					echo "</div>";
 				echo "</div>";
 		echo "</ul>";
 	}
 }
-echo "</div>";
-
-
-
+echo "</div";
 require "footer.php"?>
-
