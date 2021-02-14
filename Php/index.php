@@ -1,10 +1,6 @@
 
-<?php require "header.php";?>
-<body>	
-
-
-
-	<?php require "genre.php";?>
+<?php require "header.php";
+ require "genre.php";?>
 	<form name="form" action="" method="post">
 	<fieldset class="submit">
        	<input  name="trie" type="submit" value="decroisant">
