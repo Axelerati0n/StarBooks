@@ -1,7 +1,7 @@
 <?php
 session_start();
 session_unset();
-//TRANQUILLE OU QUOI 
+//BIEN OU QUOI TABITE DANS LCOIN (REGARDER LE CODE SVP)
 session_destroy();
 header('Location: connexion.php');
 exit();
