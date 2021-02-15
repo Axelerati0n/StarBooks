@@ -124,16 +124,30 @@ if (isset($_POST['envoye']))
         <div class="infos">
         <label for="duration"><font color=" white" class="style">Votre livre préférée:</font></label><br>
         <select name="duration" required>
-        	<option value="livre1">Percy Jackson:Le voleur de foudre</option>
-        	<option value="livre2">Percy Jackson:La mer des monstres</option>
-        	<option value="livre3">La mal&eacute;diction d'Oedipe</option>
-          <option value="livre4">Achille,la naissance d'un h&eacute;ro</option>
-          <option value="livre5">D&eacute;dale et Icare</option>
-          <option value="livre6">Les 12 travaux d'Hercule</option>
-          <option value="livre7">L'enl&egrave;vement de Pers&eacute;phone</option>
-          <option value="livre8">Jason et la Toison d'or</option>
-          <option value="livre9">L'Odyss&eacute;e</option>
-          <option value="livre10">L'Illiade,la pomme de la discorde</option>
+        	<option value="livre1">Justice League</option>
+        	<option value="livre2">Les Simpson : Un sacré foin</option>
+        	<option value="livre3">Alice au pays des merveilles</option>
+          <option value="livre4">Frankenstein</option>
+          <option value="livre5">Simetierre</option>
+          <option value="livre6">Jojo's Bizzares Adventures</option>
+          <option value="livre7">My red eyes sword</option>
+          <option value="livre8">Graal, le chevalier sans nom</option>
+          <option value="livre9">Je suis une légende</option>
+          <option value="livre10">Harry potter et l'Ordre du Phénix</option>
+          <option value="livre11">Harry Potter et la coupe de feu</option>
+          <option value="livre12">Harry Potter et le prisonnier d'Azkaban</option>
+          <option value="livre13">Harry Potter et la chambre des secrets</option>
+          <option value="livre14">Harry Potter à l'école des sorciers</option>
+          <option value="livre15">Harry Potter et le Prince de sang mêlé</option>
+          <option value="livre16">Harry Potter et les reliques de la mort</option>
+          <option value="livre17">One Piece : À l'aube d'une grande aventure</option>
+          <option value="livre18">One Piece : Aux prises avec Baggy et ses hommes !</option>
+          <option value="livre19">One Piece : Une vérité qui blesse</option>
+          <option value="livre20">One Piece : Attaque au clair de lune</option>
+          <option value="livre21">One Piece : Pour qui sonne le glas</option>
+          <option value="livre22">One Piece : Le serment</option>
+          <option value="livre23">One Piece : Vieux machine</option>
+          <option value="livre24">One Piece : Je ne mourrai pas !</option>
         </select><br><br>
 
 
