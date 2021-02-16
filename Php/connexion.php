@@ -13,7 +13,7 @@ Login : <input type="text" name="login" value="<?php if (isset($_POST['login']))
 Mot de passe : <input type="password" name="pass" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"><br />
 <input type="submit" name="connexion" value="Connexion">
 </form>
-
+<a href="inscription.php">Vous inscrire</a>
 <?php
 
 require"config.php";
@@ -25,7 +25,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 		$link = mysqli_connect($HOST , $user, $password, $database);
 
 		// on teste si une entrée de la base contient ce couple login / pass
-		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND pass_md5="' . md5($_POST['pass']) . '"';
+		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND mdp="' . md5($_POST['pass']) . '"';
 		$req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error());
 		$data = mysqli_fetch_array($req);
 		mysqli_free_result($req);
