@@ -21,8 +21,8 @@ $sql = 'DELETE FROM livre WHERE isbn="$text";';
 		$data = mysqli_fetch_array($req);
 		mysqli_free_result($req);
 		mysqli_close ($link);	
-
-https://www.topachat.com/pages/configomatic.php?c=9k4QVAlIx0bmYCzUWIKSjCstpAVPD%2BKhWB3gjL%2BHWJY%3D
+	
+https://www.topachat.com/pages/configomatic.php?c=eJaYAgSGD078Jwe2kMPcbhW%2BekTgVS6PHLER%2FQPvQZc%3D
 
 		if ($data[0] == 1) {
  echo "le livre a bien ete suprimer";
