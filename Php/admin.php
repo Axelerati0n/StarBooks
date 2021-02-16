@@ -22,7 +22,7 @@ $sql = 'DELETE FROM livre WHERE isbn="$text";';
 		mysqli_free_result($req);
 		mysqli_close ($link);	
 	
-https://www.topachat.com/pages/configomatic.php?c=DBQQYXsMIOyRI09rliz1fRT2hv1ryF%2Bd%2B2Fl6FqGWfY%3D
+
 
 		if ($data[0] == 1) {
  echo "le livre a bien ete suprimer";
