@@ -7,7 +7,7 @@ require "config.php"?>
 <div class="grilindex">
 	<form name="form" action="" method="post"><br>
 		<p>trier par genre :</p>
-	
+
        	<input  name="trie" type="submit" value="decroisant">
        	<input  name="trie" type="submit" value="croissant">
 <br><br><p>Rechercher un livre :</p>
@@ -23,8 +23,8 @@ if (empty($_POST['search'])) {$search=NULL;
 }else {$search = htmlspecialchars($_POST['search']);// recuperer ce que  inscrit dans barre recherche
 }
 if (empty($tri)) {
-	if (empty($search)) { // si la barre de recherceh ne contien rien 
-		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne";/* a changer le nom de la table */
+	if (empty($search)) { // si la barre de recherceh ne contien rien
+		$sql = " SELECT titre,isbn FROM livre ";/* a changer le nom de la table */
    	}else {/* si la barre de recherche contien des chose  */
 		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne WHERE titre LIKE '%$search%' or prenom LIKE '%$search%' or annee LIKE '%$search%'; ";
 	}
@@ -35,7 +35,7 @@ if (empty($tri)) {
 		$sql ='SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre ASC;';// requete pour tier par ordre  croisant des titre
 		break;
 	case 'decroisant':
-		$sql = ' SELECT isbn,titre FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre DESC;';// requete pour trier par ordre decroisant 
+		$sql = ' SELECT isbn,titre FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre DESC;';// requete pour trier par ordre decroisant
 		break;
 	}
 }
