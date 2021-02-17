@@ -8,7 +8,7 @@
     <li class="plan"><a href="contact.php">Contact</a></li>
     <li class="plan"><a href="politique.php#cookie">Politique de protection des données personnelles</a></li>
     <li class="plan"><a href="politique.php#donnee">Cookies</a></li>
-    <li class="plan"><a href="presentation.php">Auteurs</a></li>
+    <li class="plan"><a href="presentation.php">Qui sommes-nous?</a></li>
 </ul>
 <br><br>
 </section>
