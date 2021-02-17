@@ -47,7 +47,7 @@ if ($req) {
 	while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
 		echo "<ul>";
 			 echo "<div class='ca'>";
-		  		 	echo "<a href='../detail.php?isbn=" . $data['isbn'] . "'><img src='../../img/Livres/" . $data["isbn"] . ".jpg' class='img'alt=''></a><div align='center'>";
+		  		 	echo "<a href='detail.php?isbn=" . $data['isbn'] . "'><img src='../../img/Livres/" . $data["isbn"] . ".jpg' class='img'alt=''></a><div align='center'>";
 		  		 	echo "<p class='pc'>Titre : " . $data["titre"] . "</p>";
 					echo "</div>";
 				echo "</div>";

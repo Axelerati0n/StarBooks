@@ -26,7 +26,8 @@ header{
   border:2mm ridge rgb(54, 128, 91);
   color:yellow;
    margin: 2em 2em 2em;
-   margin-left: 25%;
+   margin-left: 10%;
+   margin-right: 10%;
 }
 
 .logo{
@@ -141,7 +142,8 @@ text-align:center;
   color:white;
   }
 .logodev{
-  height: 400px;
+  height:100%;
+  width: 80%;
 
 }
 .orga{
@@ -178,10 +180,11 @@ footer{
     height: auto;
 }
 .icone{
-    overflow: auto;
-    float: left;    
-    margin: 10px 1% 10px 6%;
-    text-align: center;
+  text-align: center;
+}
+.icones{
+  width:40%;
+  height:100px;
 }
 .info{
     border-top: 6mm ridge rgba(44, 114, 60, 0.6);
@@ -219,6 +222,18 @@ a{
     background-color: #aabbaa;
     height: 200px;
     margin-bottom: 20px;
+       display: grid;
+  grid-template-columns: 25% 25% 25% 25% ;
+
+}
+.information{
+    width: 100%;
+    background-color:darkgreen;
+    height: 200px;
+    margin-bottom: 20px;
+       display: grid;
+  grid-template-columns: 25% 25% 25% 25% ;
+
 }
 /*.dedi{
     text-align: right;
