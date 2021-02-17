@@ -1,6 +1,5 @@
 <?php require "header.php";
 require "genre.php";?>
-<br>
 <div class="marge4"></div>
 <div class="grilindex">
 	<form name="form" action="" method="post"><br>
