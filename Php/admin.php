@@ -135,7 +135,7 @@ if ((isset($_POST['isbn']) && !empty($_POST['isbn'])))
  }
 
        
-<?php
+
 echo"</div>";
 ?>
 </div>
