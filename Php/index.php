@@ -3,14 +3,18 @@
 require "config.php"?>
 
 	<?php require "genre.php";?>
-	<form name="form" action="" method="post">
-	<fieldset class="submit">
+	<input  name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
+<div class="grilindex">
+	<form name="form" action="" method="post"><br>
+		<p>trier par genre :</p>
+	
        	<input  name="trie" type="submit" value="decroisant">
        	<input  name="trie" type="submit" value="croissant">
-    </fieldset>
+<br><br><p>Rechercher un livre :</p>
     <input type="text" name="search" id="search"> <!-- barre de recherche-->
-	<p><input type="submit" value="GO"></p>
-</form>
+	<input type="submit" value="GO">
+</form><br>
+</div>
 <?php
 if (empty($_POST['trie'])) {$search=NULL;
 }else {$tri = htmlspecialchars($_POST['trie']);// recuperer ce que  inscrit dans barre recherche

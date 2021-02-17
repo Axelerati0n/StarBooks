@@ -1,20 +1,16 @@
+<?php require"header.php"?>
 <?php
-session_start();
 if (!isset($_SESSION['login'])) {
 echo "string";
 	exit();
 }
 ?>
-<html>
-<head>
-	<meta charset="utf-8">
-<title>Espace membre</title>
-<!--<link rel="stylesheet" href="<?php //echo $CONFIG['root_path'] ?>style\biblioteque.css">-->
-</head>
-
-<body>
-	<a href="index.php">i</a>
-Bienvenue <?php echo htmlentities(trim($_SESSION['login'])); ?> !<br />
+<div class='grilContact'>
+	<header>
+<h1>Bienvenue <?php echo htmlentities(trim($_SESSION['login'])); ?> !</h1>
+</header>
+<div class='orga'>
+	 	 <div class="infos">
 <a href="deco.php">Déconnexion</a>
-</body>
-</html>
+</div></div></div>
+<?php require"footer.php"?>

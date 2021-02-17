@@ -107,7 +107,7 @@ if (isset($_POST['envoye']))
 
    <div>
   <header>
-    <h1 align="center"><font color="white">Nous contacter</font></h1>
+    <h1 align="center">Nous contacter</h1>
   </header>
     <form method="post" action="receive.php">
       <div class='orga'>
@@ -149,8 +149,6 @@ if (isset($_POST['envoye']))
           <option value="livre23">One Piece : Vieux machine</option>
           <option value="livre24">One Piece : Je ne mourrai pas !</option>
         </select><br><br>
-
-
         <label for="addreq"><font color=" white">Vos avis :</font></label><br>
         <textarea id="addreq"name="client_addreq" placeholder="Votre message"></textarea><br><br>
         <button type="reset">Tout effacer</button>

@@ -26,11 +26,15 @@ header{
   border:2mm ridge rgb(54, 128, 91);
   color:yellow;
    margin: 2em 2em 2em;
+   margin-left: 25%;
 }
 
 .logo{
-  z-index: 10001;
   padding-bottom: 5%;
+}
+.logoo{
+  width: 11%;
+
 }
 
 .bouton{
@@ -50,24 +54,22 @@ header{
   position: fixed;
 }
 nav{
-    left: 212px;
-    width: 85%;
+   width: 100%;
     padding: 5px 0px 60px 0px;
     background-color: rgba(189, 185, 185, 0.918);
-    position: sticky;
     border-bottom: 3mm ridge rgb(54, 128, 91);
     border-top: 3mm ridge rgb(54, 128, 91);
 }
-/*enlever les points sur les listes*/
+/*enlever les points sur les lis*/
 nav ul{
     list-style-type: none;
 }
 /*position du menu deroulant */
 nav ul li{
+  padding-left: 10px;
     float: left;
-    width: 16%;
+    width: 17%;
     text-align: center;
-    position: relative;
 }
 /*decoration du premier menu deroulant*/
 nav a{
@@ -116,16 +118,28 @@ nav > ul li:hover .sous{
 .deroulant > a::after{
   content:" ▼";
 }
+.grilindex{
+  width: 70%;
+  margin-left: 17%;
+  background-color:#e2e9e2; 
+text-align:center;
+ border: 2mm ridge rgb(54, 128, 91);
+    }
+
 /* CONTACT */
 
 .grilContact{
-  width: auto;
+  width: 50%;
+  margin-left: 25%;
   background-color:white;
   padding-top:10px;
   border: 2mm ridge rgb(54, 128, 91);
     text-align:center;
 
 }
+.grilContact h1{
+  color:white;
+  }
 .logodev{
   height: 400px;
 
@@ -324,7 +338,7 @@ a{
   letter-spacing: 1px;
   border: 2mm ridge rgb(54, 128, 91);
   color: lightgreen;
-  -webkit-text-stroke: 1px;
+    -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.mythologie{

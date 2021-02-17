@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<?php require "config.php";?>
-suprimer un livre
+<?php require"header.php"?>
+<div class="grilContact">
+<header>
+<h1>Gestion livre :</h1>
+</header>
 <form name="form" action="" method="post">
-       	<input  name="trie" type="submit" value="supCo">
+<div class='infos'>
+
+
+       
        	<input  name="trie" type="submit" value="supLI">
-       	<input  name="trie" type="submit" value="modifCO">
-       	<input  name="trie" type="submit" value="modifLI">
-</form>
-<?php	
+       	<input  name="trie" type="submit" value="modifLI">  <br><br>
+       	<?php
+
 if (empty($_POST['trie'])) {$tri=NULL;
 }else {$tri = htmlspecialchars($_POST['trie']);// recuperer ce que  inscrit dans barre recherche
-}
-switch ($tri) {
-	case 'modifCO';//mod CO
-		echo "modifCO";?>
-		<form name="form" action="" method="post">
-			<input  name="tri2" type="submit" value="login">
-       		<input  name="tri2" type="submit" value="mdp">
-       	</form><?php
-       	if (empty($_POST['tri2'])) {$tri2=NULL;
-		}else {$tri2 = htmlspecialchars($_POST['tri2']);// recuperer ce que  inscrit dans barre recherche
-		}
-
-		
-		?><form name="form" action="" method="post">
-			<p><input type="text" name="search" id="search" placeholder="Entrée un login">
-			<input type="submit" value="GO"></p>
-		</form><?php
-	break;
-	case 'supCo':// sup compte
-		echo "supco";
-		?><form name="form" action="" method="post">
- 			<p><input type="text" name="search" id="search" placeholder="Entrée un Login">
-			<input type="submit" value="GO"></p>
-		</form><?php
-
-		//$sql = " DELETE FROM membre WHERE login='$text';"; // requete pour trier par ordre decroisant 
-	break;
+} 
+       	switch ($tri) {
 	case 'modifLI';//modLI
 		echo "modifLI";?>
 		<form name="form" action="" method="post">
@@ -50,10 +24,8 @@ switch ($tri) {
        		<input  name="tri2" type="submit" value="idEditeur">
        		<input  name="tri2" type="submit" value="titre">
        		<input  name="tri2" type="submit" value="isbn">
-       	</form><?php
-       	
-		
-				?><form name="form" action="" method="post">
+       	</form>
+       	<form name="form" action="" method="post">
 			<p><input type="text" name="search" id="search" placeholder="Entrée un ISBN">
 			<input type="submit" value="GO"></p>
 		</form><?php
@@ -124,5 +96,50 @@ https://www.topachat.com/pages/configomatic.php?c=i%2F%2FAasq7m%2Bq%2FigvGPg1JXV
  echo "le livre a bien ete suprimer";
  }	
 ?>
-</body>
-</html>
+</div>
+<div class='infos'>
+	<header>
+<h1>Gestion livre :</h1>
+	</header><br>
+	       <input  name="trie" type="submit" value="supCO">
+       	<input  name="trie" type="submit" value="modifCO">  <br>
+
+
+
+<?php	
+if (empty($_POST['trie'])) {$tri=NULL;
+}else {$tri = htmlspecialchars($_POST['trie']);// recuperer ce que  inscrit dans barre recherche
+}
+switch ($tri) {
+	case 'modifCO';//mod CO
+		echo "modifCO";?>
+		<form name="form" action="" method="post">
+			<input  name="tri2" type="submit" value="login">
+       		<input  name="tri2" type="submit" value="mdp">
+       	</form><?php
+       	if (empty($_POST['tri2'])) {$tri2=NULL;
+		}else {$tri2 = htmlspecialchars($_POST['tri2']);// recuperer ce que  inscrit dans barre recherche
+		}
+
+		
+		?><form name="form" action="" method="post">
+			<p><input type="text" name="search" id="search" placeholder="Entrée un login">
+			<input type="submit" value="GO"></p>
+		</form><?php
+	break;
+	case 'supCo':// sup compte
+		echo "supco";
+		?><form name="form" action="" method="post">
+ 			<p><input type="text" name="search" id="search" placeholder="Entrée un Login">
+			<input type="submit" value="GO"></p>
+		</form><?php
+
+		//$sql = " DELETE FROM membre WHERE login='$text';"; // requete pour trier par ordre decroisant 
+	break;
+} 
+echo"</div>";
+?>
+</div>
+</div>
+</div>
+<?php require"footer.php"?>

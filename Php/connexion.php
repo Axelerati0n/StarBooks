@@ -1,19 +1,17 @@
+<?php require"header.php"?>
 
-<html>
-<head>
-	<meta charset="utf-8">
-	<!--<link rel="stylesheet" href="<?php //echo $CONFIG['root_path'] ?>style\biblioteque.css">-->
-<title>Accueil</title>
-</head>
-
-<body>
-Connexion à l'espace membre :<br />
+<div class='grilContact'>
+<header>
+<h1>Connexion à l'espace membre :</h1>
+</header>	
+	 <div class='orga'>
+	 	 <div class="infos">
 <form action="connexion.php" method="post">
 Login : <input type="text" name="login" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['login'])); ?>"><br />
 Mot de passe : <input type="password" name="pass" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"><br />
 <input type="submit" name="connexion" value="Connexion">
 </form>
-<a href="inscription.php">Vous inscrire</a>
+
 <?php
 
 require"config.php";
@@ -25,8 +23,8 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 		$link = mysqli_connect($HOST , $user, $password, $database);
 
 		// on teste si une entrée de la base contient ce couple login / pass
-		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND mdp="' . md5($_POST['pass']) . '"';
-		$req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error());
+		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND pass_md5="' . md5($_POST['pass']) . '"';
+		$req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($link));
 		$data = mysqli_fetch_array($req);
 		mysqli_free_result($req);
 		mysqli_close ($link);
@@ -54,5 +52,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
 if (isset($erreur)) echo '<br /><br />',$erreur;
 ?>
-</body>
-</html>
+</div>
+</div>
+</div>
+<?php require"footer.php"?>
