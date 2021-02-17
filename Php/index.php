@@ -4,7 +4,7 @@ require "genre.php";?>
 	<input name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
 <div class="grilindex">
 	<form name="form" action="" method="post"><br>
-		<p>Trier par genre :</p>
+		<p>Trier par titre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
        	<input  name="trie" type="submit" value="Croissant">
