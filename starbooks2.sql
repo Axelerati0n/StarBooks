@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 17 fév. 2021 à 18:22
+-- Généré le : mer. 17 fév. 2021 à 21:34
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -78,18 +78,21 @@ CREATE TABLE IF NOT EXISTS `genre` (
   `IdGenre` int(11) NOT NULL AUTO_INCREMENT,
   `NomGenre` varchar(50) NOT NULL,
   PRIMARY KEY (`IdGenre`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `genre`
 --
 
 INSERT INTO `genre` (`IdGenre`, `NomGenre`) VALUES
-(1, 'Conte'),
-(2, 'Roman'),
+(1, 'Fantastique'),
+(2, 'Aventure'),
 (3, 'Manga'),
 (4, 'BD'),
-(5, 'Horreur');
+(5, 'Horreur'),
+(6, 'Science'),
+(7, 'Mythologie'),
+(8, 'Medieval');
 
 -- --------------------------------------------------------
 
@@ -149,23 +152,24 @@ CREATE TABLE IF NOT EXISTS `livre` (
 INSERT INTO `livre` (`Isbn`, `Titre`, `Annee`, `Nbpages`, `Resume`, `EmpruntLivre`, `IdPersonne`, `IdEditeur`, `IdGenre`, `IdLangue`, `idmembre`) VALUES
 ('9782010009242', 'Alice au pays des merveilles', 2017, 80, '0', 0, 3, 3, 1, 2, 1),
 ('9782010009297', 'L\'appel de la forêt', 2014, 192, '0', 0, 14, 6, 2, 2, 1),
-('9782013231725', 'Le chevalier au bouclier vert', 2014, 288, '0', 0, 15, 6, 2, 2, 1),
+('9782013231725', 'Le chevalier au bouclier vert', 2014, 288, '0', 0, 15, 6, 8, 2, 1),
 ('9782013949736', 'La Belle et la Bête', 2017, 128, '0', 0, 4, 3, 1, 2, 1),
 ('9782070418077', 'Je suis une légende', 2001, 228, '0', 0, 10, 10, 2, 2, 1),
 ('9782070468089', 'Frankenstein', 2015, 270, '0', 0, 5, 5, 5, 2, 1),
-('9782070541270', 'Harry Potter à l\'école des sorciers ', 1997, 308, 'Le jour de ses onze ans, Harry Potter, un orphelin élevé par son oncle et sa tante qui le déteste, voit\r\nson existence bouleversée. Un géant vient le chercher pour l\'emmener à Poudlard, la célèbre école\r\nde sorcellerie ou une place l\'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre\r\nun troll : Harry se révèle être un sorcier très doué. Mais quel mystère entoure sa naissance et qui est\r\nl\'effroyable V........, le mage dont personne n\'ose prononcer le nom ?', 0, 11, 11, 2, 2, 1),
-('9782070541294', 'Harry Potter et la chambre des secrets ', 1998, 308, 'Une rentrée fracassante en voiture volante, une étrange malédiction qui s\'abat sur les élèves, cette\r\ndeuxième année à l\'école des sorciers ne s\'annonce pas de tout repos ! Harry Potter découvre une\r\ninscription énigmatique : \"La Chambre des Secrets a été ouverte. Ennemis de l\'héritier prenez\r\ngarde !\" En compagnie de ses fidèles amis, Ron et Hermione, l\'apprenti sorcier mène l\'enquête.', 0, 11, 11, 2, 2, 1),
-('9782070543588', 'Harry Potter et la coupe de feu ', 2000, 784, 'Après un horrible été chez les Dursley, Harry Potter entre en quatrième année au collège de\r\nPoudlard. À quatorze ans, il voudrait simplement être un jeune sorcier comme les autres, retrouver\r\nses amis Ron et Hermione, assister avec eux à la Coupe du Monde de quidditch, apprendre de\r\nnouveaux sortilèges et essayer des potions inconnues. Une grande nouvelle l\'attend à son arrivée : la\r\ntenue à Poudlard d\'un tournoi de magie entre les plus célèbres écoles de sorcellerie. Déjà les\r\nspectaculaires délégations étrangères font leur entrée… Harry se réjouit. Trop vite. Il va se trouver\r\nplongé au cœur des événements les plus dramatiques qu\'il ait jamais eu à affronter.\r\nEnvoûtant, drôle, bouleversant, ce quatrième tome est le pilier central des aventures de Harry\r\nPotter. En effet, d\'après l\'auteur, il est le pivot de la série. Celui où la mort apparaît. Les thèmes\r\ndeviennent plus graves, plus tragiques.', 0, 11, 11, 2, 2, 1),
-('9782070556854', 'Harry potter et l\'Ordre du Phénix ', 2003, 984, 'À quinze ans, Harry s\'apprête à entrer en cinquième année à Poudlard. Et s\'il est heureux de\r\nretrouver le monde des sorciers, il n\'a jamais été aussi anxieux. L\'adolescence, la perspective des\r\nexamens importants en fin d\'année et ces étranges cauchemars... Car Celui-Dont-On-Ne-Doit-PasPrononcer-Le-Nom est de retour et, plus que jamais, Harry sent peser sur lui une terrible menace.\r\nUne menace que le ministère de la Magie ne semble pas prendre au sérieux, contrairement à\r\nDumbledore. Poudlard devient alors le terrain d\'une véritable lutte de pouvoir. La résistance\r\ns\'organise autour de Harry qui va devoir compter sur le courage et la fidélité de ses amis de\r\ntoujours...', 0, 11, 11, 2, 2, 1),
-('9782070572670', 'Harry Potter et le Prince de sang mêlé ', 2005, 720, 'Dans un monde de plus en plus inquiétant, Harry se prépare à retrouver Ron et Hermione. Bientôt,\r\nce sera la rentrée à Poudlard, avec les autres étudiants de sixième année. Mais pourquoi le\r\nprofesseur Dumbledore vient-il en personne chercher Harry chez les Dursley ?\r\n', 0, 11, 11, 2, 2, 1),
-('9782070615360', 'Harry Potter et les reliques de la mort ', 2007, 607, 'Dans cette ultime aventure, Harry doit accomplir la tâche que lui a confié Dumbledore : détruire les\r\nderniers Horcruxes afin de vaincre Voldemort. Pour cela, il sera accompagné de ses deux fidèles amis\r\nRon et Hermione mais de nombreux obstacles les attendent...', 0, 11, 11, 2, 2, 1),
-('9782070643042', 'Harry Potter et le prisonnier d\'Azkaban ', 1999, 448, 'Le monde des gens ordinaires, les Moldus, comme celui des sorciers, est en émoi : Sirius Black, un\r\ndangereux criminel, s\'est échappé de la forteresse d\'Azkaban. Les redoutables gardiens de la prison\r\nassureront la sécurité du collège Poudlard, car le prisonnier évadé recherche Harry Potter. C\'est donc\r\nsous bonne garde que le jeune sorcier fait sa troisième rentrée. Mais est-il vraiment à l\'abri du\r\ndanger qui le menace ?\r\n', 0, 11, 11, 2, 2, 1),
-('9782081240728', 'Graal 2-la neige et le sang', 2010, 272, '0', 0, 9, 9, 2, 2, 1),
-('9782081250833', 'Graal, le chevalier sans nom', 2011, 354, '0', 0, 9, 9, 2, 2, 1),
-('9782081250857', 'Graal 3-La Nef du lion', 2011, 235, '0', 0, 9, 9, 2, 2, 1),
+('9782070541270', 'Harry Potter à l\'école des sorciers ', 1997, 308, 'Le jour de ses onze ans, Harry Potter, un orphelin élevé par son oncle et sa tante qui le déteste, voit\r\nson existence bouleversée. Un géant vient le chercher pour l\'emmener à Poudlard, la célèbre école\r\nde sorcellerie ou une place l\'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre\r\nun troll : Harry se révèle être un sorcier très doué. Mais quel mystère entoure sa naissance et qui est\r\nl\'effroyable V........, le mage dont personne n\'ose prononcer le nom ?', 0, 11, 11, 6, 2, 1),
+('9782070541294', 'Harry Potter et la chambre des secrets ', 1998, 308, 'Une rentrée fracassante en voiture volante, une étrange malédiction qui s\'abat sur les élèves, cette\r\ndeuxième année à l\'école des sorciers ne s\'annonce pas de tout repos ! Harry Potter découvre une\r\ninscription énigmatique : \"La Chambre des Secrets a été ouverte. Ennemis de l\'héritier prenez\r\ngarde !\" En compagnie de ses fidèles amis, Ron et Hermione, l\'apprenti sorcier mène l\'enquête.', 0, 11, 11, 6, 2, 1),
+('9782070543588', 'Harry Potter et la coupe de feu ', 2000, 784, 'Après un horrible été chez les Dursley, Harry Potter entre en quatrième année au collège de\r\nPoudlard. À quatorze ans, il voudrait simplement être un jeune sorcier comme les autres, retrouver\r\nses amis Ron et Hermione, assister avec eux à la Coupe du Monde de quidditch, apprendre de\r\nnouveaux sortilèges et essayer des potions inconnues. Une grande nouvelle l\'attend à son arrivée : la\r\ntenue à Poudlard d\'un tournoi de magie entre les plus célèbres écoles de sorcellerie. Déjà les\r\nspectaculaires délégations étrangères font leur entrée… Harry se réjouit. Trop vite. Il va se trouver\r\nplongé au cœur des événements les plus dramatiques qu\'il ait jamais eu à affronter.\r\nEnvoûtant, drôle, bouleversant, ce quatrième tome est le pilier central des aventures de Harry\r\nPotter. En effet, d\'après l\'auteur, il est le pivot de la série. Celui où la mort apparaît. Les thèmes\r\ndeviennent plus graves, plus tragiques.', 0, 11, 11, 6, 2, 1),
+('9782070556854', 'Harry potter et l\'Ordre du Phénix ', 2003, 984, 'À quinze ans, Harry s\'apprête à entrer en cinquième année à Poudlard. Et s\'il est heureux de\r\nretrouver le monde des sorciers, il n\'a jamais été aussi anxieux. L\'adolescence, la perspective des\r\nexamens importants en fin d\'année et ces étranges cauchemars... Car Celui-Dont-On-Ne-Doit-PasPrononcer-Le-Nom est de retour et, plus que jamais, Harry sent peser sur lui une terrible menace.\r\nUne menace que le ministère de la Magie ne semble pas prendre au sérieux, contrairement à\r\nDumbledore. Poudlard devient alors le terrain d\'une véritable lutte de pouvoir. La résistance\r\ns\'organise autour de Harry qui va devoir compter sur le courage et la fidélité de ses amis de\r\ntoujours...', 0, 11, 11, 6, 2, 1),
+('9782070572670', 'Harry Potter et le Prince de sang mêlé ', 2005, 720, 'Dans un monde de plus en plus inquiétant, Harry se prépare à retrouver Ron et Hermione. Bientôt,\r\nce sera la rentrée à Poudlard, avec les autres étudiants de sixième année. Mais pourquoi le\r\nprofesseur Dumbledore vient-il en personne chercher Harry chez les Dursley ?\r\n', 0, 11, 11, 6, 2, 1),
+('9782070615360', 'Harry Potter et les reliques de la mort ', 2007, 607, 'Dans cette ultime aventure, Harry doit accomplir la tâche que lui a confié Dumbledore : détruire les\r\nderniers Horcruxes afin de vaincre Voldemort. Pour cela, il sera accompagné de ses deux fidèles amis\r\nRon et Hermione mais de nombreux obstacles les attendent...', 0, 11, 11, 6, 2, 1),
+('9782070643042', 'Harry Potter et le prisonnier d\'Azkaban ', 1999, 448, 'Le monde des gens ordinaires, les Moldus, comme celui des sorciers, est en émoi : Sirius Black, un\r\ndangereux criminel, s\'est échappé de la forteresse d\'Azkaban. Les redoutables gardiens de la prison\r\nassureront la sécurité du collège Poudlard, car le prisonnier évadé recherche Harry Potter. C\'est donc\r\nsous bonne garde que le jeune sorcier fait sa troisième rentrée. Mais est-il vraiment à l\'abri du\r\ndanger qui le menace ?\r\n', 0, 11, 11, 6, 2, 1),
+('9782081240728', 'Graal 2-la neige et le sang', 2010, 272, '0', 0, 9, 9, 8, 2, 1),
+('9782081250833', 'Graal, le chevalier sans nom', 2011, 354, '0', 0, 9, 9, 8, 2, 1),
+('9782081250857', 'Graal 3-La Nef du lion', 2011, 235, '0', 0, 9, 9, 8, 2, 1),
 ('9782253012696', 'Le tour du monde en 80 jours', 1976, 352, '0', 0, 13, 5, 2, 2, 1),
 ('9782253151432', 'Simetierre', 2003, 636, '0', 0, 6, 6, 5, 2, 1),
-('9782266283021', 'La planète des singes', 2017, 1992, '0', 0, 16, 13, 2, 2, 1),
+('9782266283021', 'La planète des singes', 2017, 1992, '0', 0, 16, 13, 6, 2, 1),
+('9782344001684', 'Jason et la toison d\'or', 2016, 56, 'Héritier du trône d’Iolcos, Jason est le seul survivant d’un massacre perpétré par son oncle, le félon Pélias. Mis en sécurité par sa mère, il parfait son apprentissage auprès du meilleur éducateur de la Grèce : le centaure Chiron. Devenu adulte, Jason part alors accomplir son destin et réclamer son trône. Mais, piégé par son oncle, il se retrouve à devoir entreprendre la plus périlleuse des missions : rapporter la toison d’or, un trésor aussi inestimable qu’inaccessible. Pour s’en emparer, il va devoir s’entourer des meilleurs. Et bâtir un navire capable de traverser le terrible Détroit des Dardanelles. Alors, seulement, le voyage pourra commencer...\r\n\r\nDans ce premier tome d’une trilogie, découvrez la genèse de la quête de Jason, l’un des plus célèbres mythes de la Grèce antique !', 0, 17, 12, 7, 2, 1),
 ('9782368520536', 'My red eyes sword', 2015, 212, '0', 0, 8, 8, 3, 2, 1),
 ('9782723488525', 'One Piece : À l\'aube d\'une grande aventure', 2013, 208, 'Nous sommes à l\'ère des pirates. Lufy, un garçon espiègle, rêve de devenir le roi des pirates en\r\ntrouvant le \" One Piece \", un fabuleux trésor. Par mégarde, Lufy a avalé un jour un fruit démoniaque\r\nqui l\'a transformé en homme caoutchouc. Depuis, il est capable de contorsionner son corps élastique\r\ndans tous les sens, mais il a perdu la faculté de nager.\r\nAvec l\'aide de ses précieux amis, dont le fidèle Shanks, il va devoir affronter de redoutables pirates\r\ndans des aventures toujours plus rocambolesques.', 0, 12, 12, 3, 2, 1),
 ('9782723489898', 'One Piece : Aux prises avec Baggy et ses hommes !', 2013, 208, 'Après avoir été séparé de Zorro, Luffy atterrit dans un village terrorisé par Baggy le Clown.\r\nLuffy fait la connaissance de Nami, une voleuse qui le livre à Baggy afin de dérober la carte de la\r\nroute de tous les périls, celle qui mène soit disant au fameux One Piece, le trésor inestimable...\r\nAprès l\'arrivée de Zorro, Nami s\'alliera à eux pour vaincre Baggy et ses hommes (surtout pour voler le\r\ntrésor pour Nami).\r\nLa volonté de défense du village montrée par le maire et un chien motive fortement Luffy et Zorro\r\npour le combat, qui promet d\'être explosif...', 0, 12, 12, 3, 2, 1),
@@ -249,7 +253,8 @@ INSERT INTO `personne` (`IdPersonne`, `Nom`, `Prenom`) VALUES
 (13, 'Vernes', 'Jules'),
 (14, 'London', 'Jack'),
 (15, 'Weulersse', 'Odile'),
-(16, 'Boulle', 'Pierre');
+(16, 'Boulle', 'Pierre'),
+(17, 'Bruneau', 'Clotilde');
 
 --
 -- Contraintes pour les tables déchargées
