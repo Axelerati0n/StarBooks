@@ -1,9 +1,10 @@
 <?php require "header.php";
 require "genre.php";?>
-<div class="marge4"></div>
+<br>
+	<input name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
 <div class="grilindex">
 	<form name="form" action="" method="post"><br>
-		<p>Trier par titre :</p>
+		<p>Trier par genre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
        	<input  name="trie" type="submit" value="Croissant">

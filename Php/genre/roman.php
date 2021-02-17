@@ -21,7 +21,7 @@ if (empty($_POST['search'])) {$search=NULL;
 }
 if (empty($tri)) {
 	if (empty($search)) { // si la barre de recherceh ne contien rien 
-		$sql = "SELECT titre,isbn FROM livre WHERE IdGenre=1";/* a changer le nom de la table */
+		$sql = "SELECT titre,isbn FROM livre WHERE IdGenre=2";/* a changer le nom de la table */
    	}else {/* si la barre de recherche contien des chose  */
 		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne WHERE titre LIKE '%$search%' or prenom LIKE '%$search%' or annee LIKE '%$search%'; ";
 	}

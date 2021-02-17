@@ -5,6 +5,7 @@ require "header.php";
 
   <section>
     <?php
+         echo "<div class='block'>";
 
         $link = mysqli_connect("localhost", "root", "", "starbooks2");
         if(!mysqli_set_charset($link,"utf8mb4")){
@@ -26,29 +27,27 @@ require "header.php";
               while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
             $nom = $row["nom"];
-
-              /*echo "<section class=info>";
-                echo "<li class='prenom'><strong>Nom : </strong>" . $row["nom"] . "</li>";
-                echo "<li class='prenom'><strong>Prénom : </strong>" . $row["prenom"] . "</li>";
-                echo "</ul>";
-                echo "</section>";*/
-                echo "<div class='block'>";?>
-
-                        <div class='pp'><a href='#'><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt="<?php echo $nom?>" width="250px" height="400px" align=left></a></div>
+           
+                    ?>
+                        <div class='pp'>
+                          <a href='#'><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt=<?php echo $nom?> width="100%" height="100%" align=left></a>
                         <?php
                     echo "<p class='pres'><strong>Nom : </strong>" . $row["nom"];
                     echo "<br><br><strong>Prénom : </strong>" . $row["prenom"] . "</p>";
+
+                    ?>
+                        </div>
+                       <?php
                 
-                echo "</div>";
+               
 
 
               }
           mysqli_free_result($result);
         }
         mysqli_close($link);
-
+ echo "</div>";
 ?>
-<!--footer -->
-
+<?php require"footer.php"?>
 
 

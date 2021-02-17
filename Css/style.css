@@ -9,6 +9,7 @@ header{
     display: grid;
   grid-template-columns: 1fr 1fr 1fr  ;
   grid-gap: 20px;
+  margin-left: 14%;
 
   }
 .img{
@@ -189,6 +190,18 @@ footer{
 .info{
     border-top: 6mm ridge rgba(44, 114, 60, 0.6);
 }
+.detail{
+    width: 70%;
+    height: 380px;
+  margin-left: 17%;
+  background-color:white;
+  padding-top:10px;
+  border: 2mm ridge rgb(54, 128, 91);
+    text-align:center;
+}
+.detail img{
+  float:left;
+}
 .pop{
     list-style: none;
     width: auto;
@@ -283,11 +296,11 @@ a{
 }
 .aventure{
   background-image: url(../img/fonds/aventure.PNG);
-  width: 40%;
+  width: 39.5%;
   text-align: center;
   float: left;
   padding: 25px 0;
-  margin-left: 10%;
+  margin-left: 9.5%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -332,10 +345,10 @@ a{
   font-size: xx-large;
 }.medieval{
   background-image: url(../img/fonds/medieval.PNG);
-  width: 40%;
+  width: 39.5%;
   text-align: center;
   padding: 25px 0;
-  margin-right: 10%;
+  margin-right: 9.5%;
   float: right;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
@@ -364,10 +377,10 @@ a{
   font-size: xx-large;
 }.mythologie{
   background-image: url(../img/fonds/mythologie.PNG);
-  width: 40%;
+  width: 39.5%;
   text-align: center;
   padding: 25px 0;
-  margin-left: 10%;
+  margin-left: 9.5%;
   margin-bottom: 10%;
   float: left;
   text-shadow: lightgreen 0 0 15px;
@@ -380,9 +393,9 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 
-}.science{
-  background-image: url(../img/fonds/science.PNG);
-  width: 40%;
+}.roman{
+  background-image: url(../img/fonds/roman1.jpg);
+  width: 80%;
   text-align: center;
   float: right;
   padding: 25px 0;
@@ -416,9 +429,6 @@ a{
 .marge2{
   margin-top: 500px;
 }
-.marge4{
-  height: 175px;
-}
 @media screen and (max-width: 858px) {
   .prenom {
     margin-left: 25%!important;
@@ -451,12 +461,15 @@ a{
 .block{
   background-color: lightgreen;
   height: auto;
-  border-radius: 100px;
-  float: left;
-  width: 98%;
+  border-radius: 50px;
+  
+
   border: 2mm ridge rgb(54, 128, 91);
   margin-bottom: 5%;
   margin-top: 2%;
+     display: grid;
+  grid-template-columns: 50% 50% ;
+  text-align: center;
 }
 .trait{
   width: auto;
@@ -471,13 +484,14 @@ a{
   float: right;
 }
 .pp{
-  margin-left: 20%;
+    background-color: lightgreen;
+  height: auto;
+text-align: center;
   border: 2mm ridge rgb(54, 128, 91);
-  margin-bottom: 3%;
-  margin-top: 3%;
-  width: auto;
-  overflow: hidden;
-  border-radius: 20px;
+  margin-bottom: 5%;
+  margin-top: 2%;
+     display: grid;
+  grid-template-columns: 25% 25% ;
 }
 .pres{
   text-align: center;
