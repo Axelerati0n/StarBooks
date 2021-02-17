@@ -251,15 +251,16 @@ a{
 /*Genre*/
 .bd{
   background-image: url(../img/fonds/bd.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   float: right;
   padding: 25px 0;
-  margin-right: 9.5%;
+  margin-right: 10%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
@@ -275,7 +276,8 @@ a{
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
@@ -283,30 +285,32 @@ a{
 
 }.fantastique{
   background-image: url(../img/fonds/fantastique.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   padding: 25px 0;
-  margin-left: 9.5%;
+  margin-left: 10%;
   float: left;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.horreur{
   background-image: url(../img/fonds/horreur.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   float: right;
   padding: 25px 0;
-  margin-right: 9.5%;
+  margin-right: 10%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
@@ -321,22 +325,24 @@ a{
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.manga{
   background-image: url(../img/fonds/manga.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   float: left;
   padding: 25px 0;
-  margin-left: 9.5%;
+  margin-left: 10%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
     -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
@@ -352,26 +358,25 @@ a{
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border-left: 2mm ridge rgb(54, 128, 91);
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 
-}.science{
-  background-image: url(../img/fonds/science.PNG);
-  width: 39.5%;
+}.roman{
+  background-image: url(../img/fonds/roman1.jpg);
+  width: 80%;
   text-align: center;
   float: right;
   padding: 25px 0;
-  margin-right: 9.5%;
-  margin-bottom: 10%;
+  margin-right: 10%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
-  border-right: 2mm ridge rgb(54, 128, 91);
-  border: 2mm ridge rgb(54, 128, 91);
+  border-bottom: 2mm ridge rgb(54, 128, 91);
+  /*border: 2mm ridge rgb(54, 128, 91);*/
   color: lightgreen;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: darkgreen;
@@ -458,9 +463,11 @@ a{
 }
 .pres{
   text-align: center;
-  float: left;
-  margin-top: 2%;
-  margin-left: 5%;
+  margin-top: 3%;
+  margin-left: 0%;
+}
+.testt{
+  margin-bottom: 25%;
 }
 /*politique*/
 .cnil{
