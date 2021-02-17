@@ -1,7 +1,7 @@
 <?php require "header.php";
 require "genre.php";?>
 <br>
-	<input name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
+<div class="marge4"></div>
 <div class="grilindex">
 	<form name="form" action="" method="post"><br>
 		<p>Trier par titre :</p>
