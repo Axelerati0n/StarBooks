@@ -22,9 +22,9 @@ if (empty($_POST['search'])) {$search=NULL;
 }
 if (empty($tri)) {
 	if (empty($search)) { // si la barre de recherceh ne contien rien 
-		$sql = "SELECT titre,isbn FROM livre";/* a changer le nom de la table */
+		$sql = "SELECT Titre,Isbn FROM livre";/* a changer le nom de la table */
    	}else {/* si la barre de recherche contien des chose  */
-		$sql = "SELECT titre,isbn FROM livre JOIN editeur e ON e.IdEditeur = livre.IdEditeur JOIN personne p ON p.IdPersonne = livre.IdPersonne WHERE Titre LIKE '%$search%' or Prenom LIKE '%$search%' or Nom LIKE '%$search%'or Annee LIKE '%$search%'; ";
+		$sql = "SELECT Titre,Isbn FROM livre JOIN editeur e ON e.IdEditeur = livre.IdEditeur JOIN personne p ON p.IdPersonne = livre.IdPersonne WHERE Titre LIKE '%$search%' or Prenom LIKE '%$search%' or Nom LIKE '%$search%'or Annee LIKE '%$search%'; ";
 	}
 			//$sql = " SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne JOIN genre g ON g.id = livre.genre  ORDER BY genre;"; // requete pour trier par genre a changer
 }else{
