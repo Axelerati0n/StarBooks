@@ -283,11 +283,11 @@ a{
 }
 .aventure{
   background-image: url(../img/fonds/aventure.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   float: left;
   padding: 25px 0;
-  margin-left: 9.5%;
+  margin-left: 10%;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -332,10 +332,10 @@ a{
   font-size: xx-large;
 }.medieval{
   background-image: url(../img/fonds/medieval.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   padding: 25px 0;
-  margin-right: 9.5%;
+  margin-right: 10%;
   float: right;
   text-shadow: lightgreen 0 0 15px;
   font-weight: 900;
@@ -364,10 +364,10 @@ a{
   font-size: xx-large;
 }.mythologie{
   background-image: url(../img/fonds/mythologie.PNG);
-  width: 39.5%;
+  width: 40%;
   text-align: center;
   padding: 25px 0;
-  margin-left: 9.5%;
+  margin-left: 10%;
   margin-bottom: 10%;
   float: left;
   text-shadow: lightgreen 0 0 15px;
@@ -380,9 +380,9 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 
-}.roman{
-  background-image: url(../img/fonds/roman1.jpg);
-  width: 80%;
+}.science{
+  background-image: url(../img/fonds/science.PNG);
+  width: 40%;
   text-align: center;
   float: right;
   padding: 25px 0;
@@ -415,6 +415,9 @@ a{
 }
 .marge2{
   margin-top: 500px;
+}
+.marge4{
+  height: 175px;
 }
 @media screen and (max-width: 858px) {
   .prenom {
