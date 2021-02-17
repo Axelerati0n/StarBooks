@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 17 fév. 2021 à 09:47
+-- Généré le : mer. 17 fév. 2021 à 17:33
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `livre` (
 --
 
 INSERT INTO `livre` (`Isbn`, `Titre`, `Annee`, `Nbpages`, `Resume`, `EmpruntLivre`, `IdPersonne`, `IdEditeur`, `IdGenre`, `IdLangue`, `idmembre`) VALUES
-('9782010009242', 'Alice au pays des merveilles', 2017, 80, '0', 0, 3, 3, 2, 2, 1),
+('9782010009242', 'Alice au pays des merveilles', 2017, 80, '0', 0, 3, 3, 1, 2, 1),
 ('9782010009297', 'L\'appel de la forêt', 2014, 192, '0', 0, 14, 6, 2, 2, 1),
 ('9782013231725', 'Le chevalier au bouclier vert', 2014, 288, '0', 0, 15, 6, 2, 2, 1),
 ('9782013949736', 'La Belle et la Bête', 2017, 128, '0', 0, 4, 3, 1, 2, 1),
@@ -180,7 +180,7 @@ INSERT INTO `livre` (`Isbn`, `Titre`, `Annee`, `Nbpages`, `Resume`, `EmpruntLivr
 ('9782723492560', 'One Piece : Le plus grand bandit d\'East Blue', 2013, 192, 'U-ti-li-ser ? L’attitude d’Arlong qui ne considère Nami que comme un outil pour sa réussite\r\npersonnelle met Luffy hors de lui ! Afin qu’elle puisse retrouver le sourire, ce dernier n’hésitera pas à\r\nréduire Arlong Park en un vulgaire tas de cailloux !', 0, 12, 12, 3, 2, 1),
 ('9782723492577', 'One Piece : Et ainsi débuta la légende', 2013, 192, 'Et voilà comment débuta la légende… À peine chacun a-t-il eu le temps de se remémorer la promesse\r\nqu’il ou elle s’était faite que voilà l’équipage du “Vogue Merry” parvenu aux abords de Grand Line. La\r\nmontagne qui se dresse sous leurs yeux ne les effraie pas et ils s’élancent sans coup férir sur le canal\r\nqui mène à son sommet. Mais quelle est cette masse noire qui désormais leur fait obstacle ?!', 0, 12, 12, 3, 2, 1),
 ('9782723492584', 'One Piece : Tiens bon !!', 2013, 192, 'Baroque Works… À peine ont-ils pénétré sur Grand Line que Luffy et son équipage deviennent la\r\ncible d’une organisation criminelle secrète. Ils ne tarderont pas à apprendre le nom de l’homme à la\r\ntête de cette organisation, ce qui n’arrangera en rien leurs affaires, loin de là…', 0, 12, 12, 3, 2, 1),
-('9782756056968', 'Jojo\\\'s Bizzares Adventures', 2015, 224, '0', 0, 7, 7, 3, 2, 1),
+('9782756056968', 'Jojo\'s Bizzares Adventures', 2015, 224, '0', 0, 7, 7, 3, 2, 1),
 ('9782874425554', 'Les Simpson : Un sacré foin', 2014, 160, '0', 0, 2, 2, 4, 2, 1),
 ('9791026819523', 'Justice League', 2019, 560, '0', 0, 1, 1, 4, 2, 1);
 
@@ -237,12 +237,12 @@ INSERT INTO `personne` (`IdPersonne`, `Nom`, `Prenom`) VALUES
 (1, 'Johns', 'Geoff'),
 (2, 'Groening', 'Matt'),
 (3, 'Caroll', 'Lewis'),
-(4, 'Leprince de Beaumont', 'Jeanne-Marie'),
+(4, 'Leprince_de_Beaumont', 'Jeanne-Marie'),
 (5, 'Shelley', 'Mary'),
 (6, 'King', 'Stephen'),
 (7, 'Araki', 'Hirohiko'),
 (8, 'Tashiro', 'Tetsuya'),
-(9, 'De montella', 'Christian'),
+(9, 'De_montella', 'Christian'),
 (10, 'Matheson', 'Richard'),
 (11, 'Rowling', 'Joanne'),
 (12, 'Oda', 'Eiichiro'),
