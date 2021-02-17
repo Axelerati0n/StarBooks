@@ -1,6 +1,6 @@
-      <div class="marge2"></div>
-        <footer>
-            <div class="scroll_to_top">
+<div class="marge2"></div>
+<footer>
+        <div class="scroll_to_top">
       <a href="#top"><p id="scroll_to_top">Haut de page</p></a>
     </div>
         <div class="bande">
@@ -17,36 +17,28 @@
             <div class="info">
                 <ul class="main">
                     <section class="liens">
-                        <li class="tracteur">SAV</li>
+                        <li class="tracteur">Services et aides</li>
                             <ul classe="secon">
-                                <a href="#"><li class="pop">Test</li></a>
-                                <a href="#"><li class="pop">Test</li></a>
-                                <a href="#"><li class="pop">Test</li></a>
-                                <a href="#"><li class="pop">Test</li></a>
+                            <a href="<?php echo $CONFIG["root_path"] ?>PHP/plan.php"><li class="pop">Plan du site</li></a>
                             </ul>
                     </section>
                     <section class="liens">
                         <li class="tracteur">Devigual</li>
                             <ul classe="secon">
-                                <a href="#"><li class="pop">Qui sommes-nous?</li></a>
-                                <a href="#"><li class="pop">Test</li></a>
-                                <a href="#"><li class="pop">Test</li></a>
+                                <a href="<?php echo $CONFIG["root_path"] ?>PHP/presentation.php"><li class="pop">Qui sommes-nous?</li></a>
                             </ul> 
                     </section>     
                     <section class="liens"> 
                         <li class="tracteur">Politiques</li>
                             <ul classe="secon">
-                                <a href="#"><li class="pop">Cookies</li></a>
-                                <a href="#"><li class="pop">Politique de confidentialité</li></a>
-                                <a href="politique.php"><li class="pop">Politique de protection des données personnelles</li></a>
+                                <a href="<?php echo $CONFIG["root_path"] ?>PHP/politique.php#donnee"><li class="pop">Politique de protection des données personnelles</li></a>
+                                <a href="<?php echo $CONFIG["root_path"] ?>PHP/politique.php#cookie"><li class="pop">Cookies</li></a>
                             </ul>
                     </section>
                     <section class="liens">
                         <li class="tracteur">Autres</li>
                             <ul classe="secon">
-                                <a href="#"><li class="pop">Plan du site</li></a>
-                                <a href="#"><li class="pop">Événements</li></a>
-                                <a href="#"><li class="pop">Horaires</li></a>
+                                <a href="<?php echo $CONFIG["root_path"] ?>PHP/evenement.php"><li class="pop">Événements</li></a>
                             </ul>
                     </section>
                 </ul>
