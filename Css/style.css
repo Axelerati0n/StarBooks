@@ -394,5 +394,103 @@ a{
   list-style: none;
 }
 .marge2{
-  margin-top: 100px;
+  margin-top: 500px;
+}
+@media screen and (max-width: 858px) {
+  .prenom {
+    margin-left: 25%!important;
+    float: left!important;
+    width: 50%!important;
+  }
+  .pres {
+    margin-left: 5%!important;
+    margin-right: 5%!important;
+    margin-bottom: 20%!important;
+    width: 50%!important;
+    height: auto!important;
+  }
+  .block{
+    height: 20%!important;
+  }
+  .marge3{
+    margin-bottom: 2200px!important;
+  }
+}
+@media screen and (max-width: 1854px) {
+  .lol{
+    margin-bottom: 1000px!important;
+  }
+}
+.marge3{
+  margin-bottom: 1000px;
+}
+/*Presentation*/
+.block{
+  background-color: lightgreen;
+  height: auto;
+  border-radius: 100px;
+  float: left;
+  width: 98%;
+  border: 2mm ridge rgb(54, 128, 91);
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+.trait{
+  width: auto;
+  float: left;
+}
+.prenom{
+  border: 2mm ridge rgb(54, 128, 91);
+  text-align: center;
+  margin-right: 25%;
+  margin-top: 1%;
+  width: 15%; 
+  float: right;
+}
+.pp{
+  margin-left: 20%;
+  border: 2mm ridge rgb(54, 128, 91);
+  margin-bottom: 3%;
+  margin-top: 3%;
+  width: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.pres{
+  text-align: center;
+  float: left;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+/*politique*/
+.cnil{
+  margin-left: 8%;
+}
+.cnil2{
+  margin-left: 10%;
+}
+.espace{
+  margin-bottom: 50px;
+}
+.bou{
+  color:lightseagreen
+}
+/*plan*/
+.site{
+  margin: 1% 20%;
+  width: 60%;
+}
+.plan{
+  margin-left: 15%;
+}
+.plan:hover{
+  color: whitesmoke;
+  text-decoration: underline double;
+}
+.plan2:hover{
+  color: whitesmoke;
+  text-decoration: underline double;
+}
+.pub{
+  padding: 2% 0;
 }
