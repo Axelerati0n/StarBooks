@@ -55,4 +55,4 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 if (isset($erreur)) echo '<br /><br />',$erreur;
 ?>
 </body>
-</html
+</html>
