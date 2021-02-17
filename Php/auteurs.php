@@ -1,7 +1,6 @@
 <?php $page_title="secondaire";
 require "header.php";
 ?>
-<?php require "config.php";?>
 
 
   <section>
@@ -28,24 +27,19 @@ require "header.php";
 
             $nom = $row["nom"];
 
+              /*echo "<section class=info>";
+                echo "<li class='prenom'><strong>Nom : </strong>" . $row["nom"] . "</li>";
+                echo "<li class='prenom'><strong>Prénom : </strong>" . $row["prenom"] . "</li>";
+                echo "</ul>";
+                echo "</section>";*/
+                echo "<div class='block'>";?>
 
-            ?>
-
-
-
-
-
-            <div class=ca><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt="<?php echo $nom?>" width="250px" height="400px"></div>
-
-
-
-            <ul class=auteurs>
-              <?php
-                echo "<li><strong>Nom : </strong>" . $row["nom"] . "</li>";
-                echo "<li><strong>Prénom : </strong>" . $row["prenom"] . "</li>";
-                echo"</ul>";
-                echo"<section class=info>";
-
+                        <div class='pp'><a href='#'><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt="<?php echo $nom?>" width="250px" height="400px" align=left></a></div>
+                        <?php
+                    echo "<p class='pres'><strong>Nom : </strong>" . $row["nom"];
+                    echo "<br><br><strong>Prénom : </strong>" . $row["prenom"] . "</p>";
+                
+                echo "</div>";
 
 
               }
@@ -53,14 +47,8 @@ require "header.php";
         }
         mysqli_close($link);
 
-
-
-          ?>
-<?php require "footer.php";?>
-
+?>
+<!--footer -->
 
 
 
-
-   </body>
-</html>
