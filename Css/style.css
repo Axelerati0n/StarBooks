@@ -44,7 +44,7 @@ height:   100%;
 
 .bouton{
   padding: 5px;
-  background: rgba(0, 175, 196,1);
+
   float: right;
   font-family: arial;
   margin:10px;
@@ -132,7 +132,7 @@ margin-left:  43%;
 .grilindex{
   width: 70%;
   margin-left: 17%;
-  background-color:#e2e9e2; 
+  background-color:#e2e9e2;
   display:  grid;
   grid-template-columns: 1fr;
 
@@ -291,7 +291,7 @@ a{
 }
 .scroll_to_top :hover{
   text-decoration: underline;
-}  
+}
 .marge{
   height: 220px;
 }
@@ -440,7 +440,7 @@ a{
   background-color: lightgreen;
   padding-bottom: 10px;
   color: rgb(39, 129, 39);
-  
+
 }
 .bonsoir{
   list-style: none;
@@ -484,7 +484,7 @@ a{
   background-color: lightgreen;
   height: auto;
   border-radius: 50px;
-  
+
 
   border: 2mm ridge rgb(54, 128, 91);
   margin-bottom: 5%;
@@ -502,7 +502,7 @@ a{
   text-align: center;
   margin-right: 25%;
   margin-top: 1%;
-  width: 15%; 
+  width: 15%;
   float: right;
 }
 .pp{
@@ -559,7 +559,7 @@ text-align: center;
   height:   20px;
   width:  20px;
 }
-@media(max-width: 1250px) { 
+@media(max-width: 1250px) {
 .gril{
     display: grid;
   grid-template-columns: 1fr 1fr ;
@@ -582,7 +582,7 @@ margin-left:  35%;
 }
 
 }
-@media(max-width:700px) { 
+@media(max-width:700px) {
 .gril{
     display: grid;
   grid-template-columns: 1fr ;
@@ -611,15 +611,8 @@ height:   50%;
   height:   15%;
   width:  15%;
 }
-.conn{
-  height:   10px;
-  width:  10px;
-}
-.logo a{
-    height:   10px;
-  width:  85px;
-   font-size:0.6em;
-}
+
+
 }
 .bouton2{
   padding: 5px;
@@ -682,7 +675,7 @@ li{
   background-color: lightgreen;
   height: auto;
   border-radius: 50px;
-  
+
 padding: 2% 1%;
   border: 2mm ridge rgb(54, 128, 91);
   margin-bottom: 5%;
