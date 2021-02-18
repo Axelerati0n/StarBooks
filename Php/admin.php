@@ -10,10 +10,10 @@ if (empty($_POST['tri2'])) {$tri2=NULL;
         }else {$tri2 = htmlspecialchars($_POST['tri2']);// recuperer ce que  inscrit dans barre recherche
         }
 
-                echo " changer le mdp ";
+                echo " Changer le mot de passe ";
             ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1"  placeholder="ancien mot de passe ">
-                        <input type="text" name="set2"  placeholder="nouveaux mot de passe">
+                    <p><input type="text" name="set1"  placeholder="Ancien mot de passe ">
+                        <input type="text" name="set2"  placeholder="Nouveau mot de passe">
             <input type="submit" value="GO"></p></form><?php
             if (empty($_POST['set1'])) {$set1=NULL;
         }else {$set1 = htmlspecialchars(md5($_POST['set1']));// recuperer ce que  inscrit dans barre recherche
@@ -26,8 +26,8 @@ if (empty($_POST['tri2'])) {$tri2=NULL;
 
                 echo "changer le login";
                 ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1" placeholder="ancien login">
-                        <input type="text" name="set2"  placeholder="nouveaux mot de login">
+                    <p><input type="text" name="set1" placeholder="Ancien login">
+                        <input type="text" name="set2"  placeholder="Nouveau login">
             <input type="submit" value="GO"></p></form><?php
                         if (empty($_POST['set1'])) {$set1=NULL;
         }else {$set1 = htmlspecialchars($_POST['set1']);// recuperer ce que  inscrit dans barre recherche
@@ -58,21 +58,21 @@ if (empty($_POST['tri2'])) {$tri2=NULL;
         //$sql = " DELETE FROM membre WHERE login='$text';"; // requete pour trier par ordre decroisant 
 
 
-        echo "ajouter un  livre";?>
+        echo "Ajouter un  livre";?>
             <form name="test" action="" method="post">
-                <p><input type="text" name="set2"  placeholder="Entrée un nbpage">
-                <input type="text" name="set1"  placeholder="Entrée un idlangue">
-                <input type="text" name="set3"  placeholder="Entrée un idEditeur">
-                <input type="text" name="set4"  placeholder="Entrée un titre">
-                <input type="text" name="set5"  placeholder="Entrée un ISBN">
-                <input type="text" name="set6"  placeholder="Entrée un annee">
-                <input type="text" name="set7"  placeholder="Entrée un idgenre">
-                <input type="text" name="set12"  placeholder="Entrée un resumer">
-                <input type="text" name="set8"  placeholder="Entrée un annee">
-                <input type="text" name="set9"  placeholder="Entrée un idPersone">
-                <input type="text" name="set10"  placeholder="Entrée un Empruntlivre">
-                <input type="text" name="set11"  placeholder="Entrée un IdGenre">
-                <input type="text" name="set13"  placeholder="Entrée un Idmembre">
+                <p><input type="text" name="set2"  placeholder="Entrez un nbpage">
+                <input type="text" name="set1"  placeholder="Entrez un idlangue">
+                <input type="text" name="set3"  placeholder="Entrez un idEditeur">
+                <input type="text" name="set4"  placeholder="Entrez un titre">
+                <input type="text" name="set5"  placeholder="Entrez un ISBN">
+                <input type="text" name="set6"  placeholder="Entrez un annee">
+                <input type="text" name="set7"  placeholder="Entrez un idgenre">
+                <input type="text" name="set12"  placeholder="Entrez un resumer">
+                <input type="text" name="set8"  placeholder="Entrez un annee">
+                <input type="text" name="set9"  placeholder="Entrez un idPersone">
+                <input type="text" name="set10"  placeholder="Entrez un Empruntlivre">
+                <input type="text" name="set11"  placeholder="Entrez un IdGenre">
+                <input type="text" name="set13"  placeholder="Entrez un Idmembre">
                 <input type="submit" value="GO"></p>
         </form>
         <?php   
@@ -118,9 +118,9 @@ if (empty($_POST['set12'])) {$set12=NULL;
 
         $sql ="INSERT INTO livre (Isbn, Titre, Annee, Nbpages, Resume, EmpruntLivre, IdPersonne, IdEditeur, IdGenre, IdLangue, idmembre) VALUES ('$set5', '$set4', '$set8', '$set1', '$set12', '$set10', '$set9', '$set3', '$set11', '$set1', '$set13')";
 
-    echo "suprimer LIVRE";
+    echo "Supprimer un Livre";
     ?><form name="form" action="" method="post">
-    <p><input type="text" name="set1"  placeholder="Entrée un isbn">
+    <p><input type="text" name="set1"  placeholder="Entrez un isbn">
             <input type="submit" value="GO"></p></form><?php
             if (empty($_POST['set1'])) {$set1=NULL;
         }else {$set1 = htmlspecialchars($_POST['set1']);// recuperer ce que  inscrit dans barre recherche
