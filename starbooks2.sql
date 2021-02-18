@@ -199,6 +199,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `idmembre` int(11) NOT NULL AUTO_INCREMENT,
   `mdp` text NOT NULL,
   `Login` varchar(255) NOT NULL,
+  `activation` varchar(50) NOT NULL,
   PRIMARY KEY (`idmembre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
@@ -206,18 +207,18 @@ CREATE TABLE IF NOT EXISTS `membre` (
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`idmembre`, `mdp`, `Login`) VALUES
-(1, '202cb962ac59075b964b07152d234b70', 'admin'),
-(2, '6b908b785fdba05a6446347dae08d8c5', 'User1'),
-(3, 'a09bccf2b2963982b34dc0e08d8b582a', 'User2'),
-(4, 'e5d2ad241ec44cf155bc78ae8d11f715', 'User3'),
-(5, '5ad55d96abf0e50647d6de116530d6df', 'User4'),
-(6, '50c22602b70659dde2893f3a2ba0ab82', 'User5'),
-(7, '10ddead5bb8bcfaa4d62090acd7cdfb2', 'user6'),
-(8, '98cd5d17f0660baca7d652995f0d17b6', 'user7'),
-(9, 'd306313ac03787c5f5f41641773bfb9a', 'user8'),
-(10, '2a19bc085beedfd33873400cb9249e4f', 'user9'),
-(11, '31b083bc7281321ea98d3c1bc9701627', 'User10');
+INSERT INTO `membre` (`idmembre`, `mdp`, `Login`,`activation`) VALUES
+(1, '202cb962ac59075b964b07152d234b70', 'admin','1'),
+(2, '6b908b785fdba05a6446347dae08d8c5', 'User1','2'),
+(3, 'a09bccf2b2963982b34dc0e08d8b582a', 'User2','3'),
+(4, 'e5d2ad241ec44cf155bc78ae8d11f715', 'User3','4'),
+(5, '5ad55d96abf0e50647d6de116530d6df', 'User4','5'),
+(6, '50c22602b70659dde2893f3a2ba0ab82', 'User5','6'),
+(7, '10ddead5bb8bcfaa4d62090acd7cdfb2', 'user6','7'),
+(8, '98cd5d17f0660baca7d652995f0d17b6', 'user7','8'),
+(9, 'd306313ac03787c5f5f41641773bfb9a', 'user8','9'),
+(10, '2a19bc085beedfd33873400cb9249e4f', 'user9','10'),
+(11, '31b083bc7281321ea98d3c1bc9701627', 'User10','11');
 
 -- --------------------------------------------------------
 
