@@ -1,5 +1,5 @@
 <?php require "header.php"?>
-<section class="block">
+<section class="blocq">
     <h2 class="site">Plan du site</h2>
 <ul>
     <li class="plan"><a href="index.php">Accueil</a></li>
