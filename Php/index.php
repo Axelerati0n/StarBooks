@@ -1,17 +1,19 @@
 <?php require "header.php";
 require "genre.php";?>
 <br>
-<div class="marge4"></div>
+	<input name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
 <div class="grilindex">
+	<div class="divindex">
 	<form name="form" action="" method="post"><br>
-		<p>Trier par titre :</p>
+		<p>Trier par genre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
        	<input  name="trie" type="submit" value="Croissant">
-<br><br><p>Rechercher un livre :</p>
-    <input type="text" name="search" id="search"> <!-- barre de recherche-->
-	<input type="submit" value="GO">
+<br><br><p >Rechercher un livre :</p>
+    <input type="text" name="search" id="search" > <!-- barre de recherche-->
+	<input type="submit" value="GO" >
 </form><br>
+</div>
 </div>
 <?php
 if (empty($_POST['trie'])) {$search=NULL;

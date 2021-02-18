@@ -1,6 +1,6 @@
 
 
-<nav>
+<nav class="nav">
     <ul>
       <li><a href="<?php echo $CONFIG['root_path'] ?>Php/index.php">Menu</a></li>
       </li>

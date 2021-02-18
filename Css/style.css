@@ -8,8 +8,8 @@ header{
 .gril{
     display: grid;
   grid-template-columns: 1fr 1fr 1fr  ;
-  grid-gap: 20px;
-  margin-left: 14%;
+  grid-gap: 15px;
+  margin-left: 10%;
 
   }
 .img{
@@ -17,6 +17,9 @@ header{
     height: 375px;
     float:left;
     border-radius: 10px;
+}
+.imgdetail{
+height:   100%;
 }
 .ca{
     width: 250px;
@@ -27,7 +30,7 @@ header{
   border:2mm ridge rgb(54, 128, 91);
   color:yellow;
    margin: 2em 2em 2em;
-   margin-left: 10%;
+   margin-left: 5%;
    margin-right: 10%;
 }
 
@@ -120,11 +123,19 @@ nav > ul li:hover .sous{
 .deroulant > a::after{
   content:" ▼";
 }
+.divindex{
+
+width:  35%;
+height:   auto;
+margin-left:  43%;
+}
 .grilindex{
   width: 70%;
   margin-left: 17%;
   background-color:#e2e9e2; 
-text-align:center;
+  display:  grid;
+  grid-template-columns: 1fr;
+
  border: 2mm ridge rgb(54, 128, 91);
     }
 
@@ -161,6 +172,10 @@ text-align:center;
   background-color:rgb(54, 128, 91);
     text-align:center;
 }
+.infos li{
+  font-size:  100%;
+
+}
 .style{
   font-size: 120%;
   font-weight: 120%;
@@ -193,11 +208,15 @@ footer{
 .detail{
     width: 70%;
     height: 380px;
-  margin-left: 17%;
+  margin-left: 15%;
   background-color:white;
   padding-top:10px;
   border: 2mm ridge rgb(54, 128, 91);
     text-align:center;
+
+}
+.detail ul{
+  list-style:   none;
 }
 .detail img{
   float:left;
@@ -535,4 +554,70 @@ text-align: center;
 }
 .pub{
   padding: 2% 0;
+}
+.conn {
+  height:   20px;
+  width:  20px;
+}
+@media(max-width: 1250px) { 
+.gril{
+    display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 20px;
+  margin-left: 15%;
+
+  }
+  .logo{
+
+  padding-bottom: 5%;
+}
+.nav a{
+    font-size:1em;
+
+}
+.divindex{
+  width:  50%
+height:   auto;
+margin-left:  35%;
+}
+
+}
+@media(max-width:700px) { 
+.gril{
+    display: grid;
+  grid-template-columns: 1fr ;
+  grid-gap: 15px;
+  margin-left: 30%;
+
+  }
+  .imgdetail{
+height:   50%;
+}
+  .detail{
+    width:280px;
+    height: 800px;
+  margin-left: 30%;
+  background-color:white;
+  padding-top:10px;
+  border: 2mm ridge rgb(54, 128, 91);
+    text-align:center;
+
+}
+
+.nav a{
+  font-size:0.6em;
+}
+.logoo{
+  height:   15%;
+  width:  15%;
+}
+.conn{
+  height:   10px;
+  width:  10px;
+}
+.logo a{
+    height:   10px;
+  width:  85px;
+   font-size:0.6em;
+}
 }
