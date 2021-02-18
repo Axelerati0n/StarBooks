@@ -29,7 +29,7 @@
         				<li><a class=bouton href="membre.php"><img src="<?php echo $CONFIG['root_path'] ?>img/compte.png" class="conn" align=middle>Espace membre</a></li><?php
         				// si le login est admin alors il s'ajit de l'admin
         					if($_SESSION['login'] == "admin"){?>
-        						<a class=bouton href="admin.php"><img src="<?php echo $CONFIG["root_path"] ?>img/compte.png" class="conn" align=middle>__Admin__</a> <?php
+        						<a class=bouton href="admin.php"><img src="<?php echo $CONFIG["root_path"] ?>img/admin.png" class="conn" align=middle>__Admin__</a> <?php
         					}
         			}else{?><!--  si le login  est null alors -->
         				<a class=bouton href="connexion.php"><img src="<?php echo $CONFIG["root_path"] ?>img/compte.png" class="conn" align=middle><br>Connexion</a><?php
