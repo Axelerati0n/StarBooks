@@ -5,11 +5,11 @@ require "genre.php";?>
 <div class="grilindex">
 	<div class="divindex">
 	<form name="form" action="" method="post"><br>
-		<p>Trier par genre :</p>
+		<p>Trier par titre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
        	<input  name="trie" type="submit" value="Croissant">
-<br><br><p >Rechercher un livre :</p>
+<br><br><p >Rechercher un livre, un auteur ou une année :</p>
     <input type="text" name="search" id="search" > <!-- barre de recherche-->
 	<input type="submit" value="GO" >
 </form><br>
