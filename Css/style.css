@@ -621,3 +621,52 @@ height:   50%;
    font-size:0.6em;
 }
 }
+.bouton2{
+  padding: 5px;
+  background: rgba(0, 175, 196,1);
+  float: right;
+  font-family: arial;
+  margin:10px;
+  border-radius: 20px
+}
+#menu ul{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#menu li{
+display:inline-block;
+position:relative;
+border-radius:8px 8px 8px 8px;
+}
+#menu ul{
+position:absolute;
+z-index: 1000;
+max-height:0;
+left: 5;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+#menu li:hover ul{
+max-height:15em;
+}
+/* background des liens menus */
+#menu li:first-child:hover, #menu li:first-child li:hover{
+background:#00E4FF;
+}
+/* les a href */
+#menu a{
+text-decoration:none;
+display:block;
+padding:8px 32px;
+color:#fff;
+font-family:arial;
+
+}
+#menu ul a{
+padding:8px 0;
+}
