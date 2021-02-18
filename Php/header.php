@@ -25,7 +25,7 @@
         			session_start();
         			if (isset($_SESSION['login'])) {?>   <!-- si  login n'est pas null allor la persoone est connecter-->
 
-        				<li><a class=bouton href="deco.php"><img src="<?php echo $CONFIG['root_path'] ?>img/compte.png" class="conn" align=middle>Deconnexion</a></li>
+        				<li><a class=bouton href="deco.php"><img src="<?php echo $CONFIG['root_path'] ?>img/deco.png" class="conn" align=middle>Deconnexion</a></li>
         				<li><a class=bouton href="membre.php"><img src="<?php echo $CONFIG['root_path'] ?>img/compte.png" class="conn" align=middle>Espace membre</a></li><?php
         				// si le login est admin alors il s'ajit de l'admin
         					if($_SESSION['login'] == "admin"){?>
