@@ -670,3 +670,27 @@ font-family:arial;
 #menu ul a{
 padding:8px 0;
 }
+li{
+  list-style: none;
+}
+.entr{
+  margin-left: 15%;
+  margin-right: 15%;
+  text-decoration: underline double;
+}
+.blocq{
+  background-color: lightgreen;
+  height: auto;
+  border-radius: 50px;
+  
+padding: 2% 1%;
+  border: 2mm ridge rgb(54, 128, 91);
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+.marge5{
+  margin-bottom: 10px;
+}
+.eve{
+  margin-left: 15%;
+}
