@@ -23,7 +23,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 		$link = mysqli_connect($HOST , $user, $password, $database);
 
 		// on teste si une entrée de la base contient ce couple login / pass
-		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND pass_md5="' . md5($_POST['pass']) . '"';
+		$sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND mdp="' . md5($_POST['pass']) . '"';
 		$req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($link));
 		$data = mysqli_fetch_array($req);
 		mysqli_free_result($req);
