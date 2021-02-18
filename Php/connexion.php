@@ -1,4 +1,4 @@
-<?php require"header.php"?>
+<?php require "header.php"?>
 
 <div class='grilContact'>
 <header>
@@ -41,7 +41,7 @@ $sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND md
 		}
 		// sinon  un gros problème 
 		else {
-			$erreur = 'Probème dans BDD : plusieurs membres ont les mêmes identifiants. ';
+			$erreur = 'Problème dans BDD : plusieurs membres ont les mêmes identifiants. ';
 		}
 	}
 	else {
@@ -49,9 +49,9 @@ $sql = 'SELECT count(*) FROM membre WHERE login="' . $_POST['login'] . '" AND md
 	}
 }
 
-if (isset($erreur)) echo '<br /><br />',$erreur;
+if (isset($erreur)) echo '<br><br>',$erreur;
 ?>
 </div>
 </div>
 </div>
-<?php require"footer.php"?>
+<?php require "footer.php"?>
