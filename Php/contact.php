@@ -12,17 +12,17 @@ if (isset($_POST['envoye']))
     /* Récupération des valeurs des champs du formulaire */
     if (get_magic_quotes_gpc())
     {
-      $name		= stripslashes(trim($_POST['client_name']));
-      $mail	= stripslashes(trim($_POST['client_mail']));
-      $sujet		= stripslashes(trim($_POST['sujet']));
-      $message		= stripslashes(trim($_POST['message']));
+      $name   = stripslashes(trim($_POST['client_name']));
+      $mail = stripslashes(trim($_POST['client_mail']));
+      $sujet    = stripslashes(trim($_POST['sujet']));
+      $message    = stripslashes(trim($_POST['message']));
     }
     else
     {
-      $name		= trim($_POST['client_name']);
-      $mail	= trim($_POST['client_mail']);
-      $sujet		= trim($_POST['sujet']);
-      $message		= trim($_POST['message']);
+      $name   = trim($_POST['client_name']);
+      $mail = trim($_POST['client_mail']);
+      $sujet    = trim($_POST['sujet']);
+      $message    = trim($_POST['message']);
     }
 
     /* Expression régulière permettant de vérifier si le
@@ -112,42 +112,36 @@ if (isset($_POST['envoye']))
     <form method="post" action="receive.php">
       <div class='orga'>
           <div class="infos">
-        	<legend class="style"><font color="white">Informations sur le client :</font></legend><br>
+          <legend class="style"><font color="white">Informations sur le client :</font></legend><br>
         
-        	<label for="name"><font color=" white">Nom :</font></label>
-        	<input type="text" id="name" name="client_name" autofocus required><br>
-       	 	<label for="mail"><font color=" white">Courriel :</font></label>
-       		 <input type="email" id="mail" required name="client_mail"><br>
+          <label for="name"><font color=" white">Nom :</font></label>
+          <input type="text" id="name" name="client_name" autofocus required><br>
+          <label for="mail"><font color=" white">Courriel :</font></label>
+           <input type="email" id="mail" required name="client_mail"><br>
    </div>
 
  </div>
         <div class="infos">
         <label for="duration"><font color=" white" class="style">Votre livre préférée:</font></label><br>
         <select name="duration" required>
-        	<option value="livre1">Justice League</option>
-        	<option value="livre2">Les Simpson : Un sacré foin</option>
-        	<option value="livre3">Alice au pays des merveilles</option>
-          <option value="livre4">Frankenstein</option>
-          <option value="livre5">Simetierre</option>
-          <option value="livre6">Jojo's Bizzares Adventures</option>
-          <option value="livre7">My red eyes sword</option>
-          <option value="livre8">Graal, le chevalier sans nom</option>
-          <option value="livre9">Je suis une légende</option>
-          <option value="livre10">Harry potter et l'Ordre du Phénix</option>
-          <option value="livre11">Harry Potter et la coupe de feu</option>
-          <option value="livre12">Harry Potter et le prisonnier d'Azkaban</option>
-          <option value="livre13">Harry Potter et la chambre des secrets</option>
-          <option value="livre14">Harry Potter à l'école des sorciers</option>
-          <option value="livre15">Harry Potter et le Prince de sang mêlé</option>
-          <option value="livre16">Harry Potter et les reliques de la mort</option>
-          <option value="livre17">One Piece : À l'aube d'une grande aventure</option>
-          <option value="livre18">One Piece : Aux prises avec Baggy et ses hommes !</option>
-          <option value="livre19">One Piece : Une vérité qui blesse</option>
-          <option value="livre20">One Piece : Attaque au clair de lune</option>
-          <option value="livre21">One Piece : Pour qui sonne le glas</option>
-          <option value="livre22">One Piece : Le serment</option>
-          <option value="livre23">One Piece : Vieux machine</option>
-          <option value="livre24">One Piece : Je ne mourrai pas !</option>
+<?php require "config.php";
+$sql ="SELECT Titre FROM `livre`;";
+$link = mysqli_connect($HOST , $user, $password, $database);
+if(!mysqli_set_charset($link,"utf8mb4")){//encodage  en utf8mb4
+  printf(mysqli_error($link));
+  exit();
+}
+echo "<div class='gril'>";
+$req = mysqli_query($link,$sql);
+if ($req) {
+  while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
+    $i =0;
+    echo "<option value='livre".$i."'>";
+            echo  $data["Titre"];
+          echo "</option>";
+          $i++;
+  }
+}?>
         </select><br><br>
         <label for="addreq"><font color=" white">Vos avis :</font></label><br>
         <textarea id="addreq"name="client_addreq" placeholder="Votre message"></textarea><br><br>
