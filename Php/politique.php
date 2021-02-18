@@ -1,6 +1,6 @@
 <?php require "header.php"?>
 
-<div class="block">
+<div class="blocq">
     <h1 class="cnil"><div id="donnee">D'après la CNIL</div></h1><br>
 <h2 class="cnil">Politique de protection des données</h2><br>
 <ul>
