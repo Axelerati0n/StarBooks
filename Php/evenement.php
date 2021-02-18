@@ -15,7 +15,7 @@
         echo "C'est les semaine du Black Friday !!! Devenez membre et profitez des soldes sur une grande partie des livres"; 
        }
        elseif($date>09/12/21 && $date<05/01/22){
-        echo "C'est les semaine du Black Friday !!! Devenez membre et profitez des soldes sur une grande partie des livres"; 
+        echo "C'est Noël !!! Devenez membre et profitez des soldes sur une grande partie des livres"; 
        }
        else{
         echo "Nous sommes le " . $date . ". Il n'y a donc pas d'événement aujourd'hui, repassez plus tard"; 
