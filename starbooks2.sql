@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 04 mars 2021 à 13:42
+-- Généré le : jeu. 04 mars 2021 à 14:15
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -231,6 +231,7 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `IdPersonne` int(11) NOT NULL,
   `Nom` varchar(50) NOT NULL,
   `Prenom` varchar(50) NOT NULL,
+  `bio` text,
   PRIMARY KEY (`IdPersonne`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -238,24 +239,24 @@ CREATE TABLE IF NOT EXISTS `personne` (
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`IdPersonne`, `Nom`, `Prenom`) VALUES
-(1, 'Johns', 'Geoff'),
-(2, 'Groening', 'Matt'),
-(3, 'Caroll', 'Lewis'),
-(4, 'Leprince_de_Beaumont', 'Jeanne-Marie'),
-(5, 'Shelley', 'Mary'),
-(6, 'King', 'Stephen'),
-(7, 'Araki', 'Hirohiko'),
-(8, 'Tashiro', 'Tetsuya'),
-(9, 'De_montella', 'Christian'),
-(10, 'Matheson', 'Richard'),
-(11, 'Rowling', 'Joanne'),
-(12, 'Oda', 'Eiichiro'),
-(13, 'Vernes', 'Jules'),
-(14, 'London', 'Jack'),
-(15, 'Weulersse', 'Odile'),
-(16, 'Boulle', 'Pierre'),
-(17, 'Bruneau', 'Clotilde');
+INSERT INTO `personne` (`IdPersonne`, `Nom`, `Prenom`, `bio`) VALUES
+(1, 'Johns', 'Geoff', 'Il commence sa carrière comme assistant de Richard Donner.\r\n\r\nAprès des débuts peu remarquables chez Marvel où il écrit les Vengeurs, il part chez DC et reprend Flash à la suite de Mark Waid. Défi difficile à relever puisque Waid a fait de la série une des plus populaires de l\'éditeur. Mais Johns s\'en tire très bien, écrit Stars and S.T.R.I.P.E. (en) et arrive bientôt sur Justice Society of America. Il se fait remarquer et la revue Wizard (en) en fait la série de l\'année. Après avoir réussi plusieurs fois à redonner de l\'intérêt à des personnages malmenés par les auteurs précédents, on lui confie en 2004 la mission de ramener Hal Jordan dans son rôle de Green Lantern. Là encore il arrive à convaincre les nouveaux comme les anciens fans. Il est l\'artisan de Infinite Crisis, la suite de Crisis on Infinite Earths, censée relancer l\'univers DC comme il l\'avait été il y a vingt ans. Il devient le scénariste vedette de DC Comics, avec qui il est sous contrat exclusif.'),
+(2, 'Groening', 'Matt', 'Matthew Abram Groening, né le 15 février 1954 à Portland (Oregon), est un dessinateur, scénariste et producteur de télévision américain. Il est le créateur du comic strip Life in Hell et des séries télévisées d\'animation Les Simpson, Futurama et Désenchantée.\r\n\r\nMatt Groening débute dans la télévision avec Life in Hell, publié dans le magazine Wet dès 1978, et qui est toujours présent dans deux cent cinquante revues hebdomadaires. Life in Hell attire l\'attention du cinéaste James L. Brooks, qui contacte Matt Groening en 1985 pour lui proposer de travailler pour l\'émission The Tracey Ullman Show, diffusée sur la Fox. Initialement, Brooks voulait que Groening adapte l\'univers de Life in Hell à la télévision. Cependant, craignant de perdre ses droits de publication, Groening décide de créer un nouvel ensemble de personnages en 1986, la famille Simpson, en nommant les membres d\'après sa propre famille, mis à part pour Bart. La série de courts métrages qui met en vedette cette famille typiquement américaine est par la suite devenue une série à part entière, Les Simpson, toujours diffusée aujourd\'hui après plus de six cents épisodes.'),
+(3, 'Caroll', 'Lewis', 'Lewis Carroll, pseudonyme de Charles Lutwidge Dodgson, né le 27 janvier 1832 à Daresbury, dans le Cheshire, et mort le 14 janvier 1898 à Guildford, est un romancier, essayiste, photographe amateur et professeur de mathématiques britannique. Il vivait et travaillait à Oxford. Il est principalement connu pour son roman Les Aventures d\'Alice au pays des merveilles (1865).\r\n\r\nIssu d\'une famille anglicane plutôt conservatrice (liée à la Haute Église), il a fait ses études à la Christ Church d\'Oxford, avant d\'y enseigner. C\'est là qu\'il rencontre Alice Liddell, fille du doyen Henry Liddell, avec qui il noue une relation à l\'origine d\'Alice au pays des merveilles, bien qu\'il l\'ait toujours nié.'),
+(4, 'Leprince_de_Beaumont', 'Jeanne-Marie', 'Jeanne-Marie Leprince de Beaumont, de son vrai nom, Marie-Barbe Leprince, née le 26 avril 1711 à Rouen1 et morte le 6 décembre 1776 à Avallon2 est une femme de lettres célèbre. Sous le nom de Mme Leprince de Beaumont3, elle est l\'auteure d\'environ soixante-dix volumes de contes pour enfants, comme La Belle et la Bête, devenus des classiques de la littérature d’enfance et de jeunesse. Elle est considérée comme l\'une des premières auteures de ce genre. Elle fut probablement l\'arrière-grand-mère de Prosper Mérimée.'),
+(5, 'Shelley', 'Mary', 'Mary Shelley , née Mary Wollstonecraft Godwin le 30 août 1797 à Somers Town, un faubourg de Londres (aujourd\'hui dans le district de Camden), et morte le 1er février 1851 à Belgravia (Londres), est une femme de lettres anglaise, romancière, dramaturge, essayiste, biographe et auteur de récits de voyage. Elle est surtout connue pour son roman Frankenstein ou le Prométhée moderne.'),
+(6, 'King', 'Stephen', 'Stephen King , né le 21 septembre 1947 à Portland dans le Maine, est un écrivain américain.\r\n\r\nIl publie son premier roman en 1974 et devient rapidement célèbre pour ses contributions dans le domaine de l\'horreur mais écrit également des livres relevant d\'autres genres comme le fantastique, la fantasy, la science-fiction et le roman policier. Tout au long de sa carrière, il écrit et publie plus de soixante romans, dont sept sous le nom de plume de Richard Bachman, et plus de deux cents nouvelles, dont plus de la moitié sont réunies dans dix recueils de nouvelles. Après son grave accident en 1999, il ralentit son rythme d\'écriture. Ses livres se sont vendus à plus de 350 millions d\'exemplaires à travers le monde1 et il établit de nouveaux records de ventes dans le domaine de l\'édition durant les années 1980, décennie où sa popularité atteint son apogée.'),
+(7, 'Araki', 'Hirohiko', 'Hirohiko Araki est né le 7 juin 1960 à Sendai1. Il y passe sa jeunesse avec ses parents et ses deux sœurs jumelles. Ces dernières l\'auront, malgré elles, poussé à devenir mangaka2 en monopolisant l\'attention de leurs parents au détriment du jeune enfant, qui va alors s\'isoler et se découvrir une passion pour les mangas3. Il réalise son premier manga vers l\'âge de 10 ans, puis, encouragé par ses camarades d\'école qui louent ses talents de dessinateur, il présente pour la première fois ses planches à des éditeurs à l\'âge de 15 ans4. Il arrête ses études à 20 ans pour devenir mangaka professionnel5.'),
+(8, 'Tashiro', 'Tetsuya', 'Testuya TASHIRO est un mangaka japonais qui s’intéresse très jeune au manga : il en dessine dès l’école primaire, fortement influencé par les œuvres Dragon Ball d’Akira TORIYAMA, Obachama-kun de Yoshinori KOBAYASHI et Dragon Quest de Kamui FUJIWARA. Après des études en école d’art pour affiner son trait, il travaille un temps pour une revue spécialisée avant que son coup de crayon ne soit remarqué. Il s’associe alors avec TAKAHIRO pour proposer Red Eyes Sword – Akame ga Kill !, un titre qui révèle son talent au grand public. Fort de cette expérience et de ce succès, le mangaka travaille désormais sur Kaijin Reijoh.'),
+(9, 'De_montella', 'Christian', 'Christian de Montella est un écrivain français né en 1957. Il a fait des études de lettres et de philosophie. Il a exercé divers métiers assez variés avant de se diriger vers l\'écriture : ouvrier agricole, comédien, moniteur de sport, attaché d\'administration...\r\n\r\nPère de trois enfants, il a déjà publié plusieurs livres dans diverses maisons d\'édition (Gallimard, Fayard, Stock...).\r\n\r\nIl écrit également pour les enfants à l\'École des loisirs, à Je Bouquine, chez Bayard et au Livre de poche jeunesse.\r\n\r\nEn 2003, un film a été réalisé à partir d\'un de ses romans, Les Corps impatients (1995). Le livre La Fugitive (2003) est inspiré de son enfance, ainsi que Reste avec moi (2001).\r\n\r\nIl a écrit la saga Graal (2003- ), série de quatre tomes, sur le roi Arthur et d\'autres livres pour la jeunesse. Il a écrit aussi Le Diable dans l\'île (2000). Son partenaire de toujours (Olivier Nadel) et lui se sont connus au lycée où ils ont écrit et illustré ensemble et depuis il continue à écrire'),
+(10, 'Matheson', 'Richard', 'Richard Burton Matheson, né le 20 février 1926 à Allendale au New Jersey et mort le 23 juin 2013 (à 87 ans) à Calabasas en Californie1, est un écrivain et scénariste américain. Ses genres de prédilection sont la science-fiction et l’épouvante.'),
+(11, 'Rowling', 'Joanne', 'Joanne Rowling , plus connue sous les noms de plume J. K. Rowlingb et Robert Galbraith, est une romancière et scénariste anglaise née le 31 juillet 1965 dans l’agglomération de Yate, dans le Gloucestershire du Sud. Elle doit sa notoriété mondiale à la série Harry Potter, dont les romans traduits en près de quatre-vingts langues ont été vendus à plus de 500 millions d\'exemplaires dans le monde.'),
+(12, 'Oda', 'Eiichiro', 'Eiichiro Oda est un mangaka (dessinateur et scénariste de manga) né le 1er janvier 1975 à Kumamoto dans la préfecture de Kumamoto, au Japon est connu pour avoir écrit le manga le plus vendu au début du xxie siècle au Japon et dans le reste du monde : One Piece.Ce manga est entré dans le Livre Guinness des records pour être devenu le manga ayant le tirage le plus élevé du monde en décembre 20141.'),
+(13, 'Vernes', 'Jules', 'Jules Verne, né le 8 février 1828 à Nantes et mort le 24 mars 1905 à Amiens, est un écrivain français dont l\'œuvre est, pour la plus grande partie, constituée de romans d\'aventures évoquant les progrès scientifiques du xixe siècle.'),
+(14, 'London', 'Jack', 'Jack London, né John Griffith Chaney le 12 janvier 1876 à San Francisco et mort le 22 novembre 1916 à Glen Ellen, Californie1,2,3,4,5, est un écrivain américain dont les thèmes de prédilection sont l\'aventure et la nature sauvage6.\r\n\r\nIl est l\'auteur de L\'Appel de la forêt et d\'autres romans célèbres (Croc-Blanc, Le Talon de fer), dont certains (Martin Eden, Le Cabaret de la dernière chance) auto-biographiques, ainsi que plus de deux cents nouvelles (dont cent soixante-quinze publiées de son vivant).'),
+(15, 'Weulersse', 'Odile', 'Odile Weulersse, née le 19 avril 1938 à Neuilly-sur-Seine, est une chercheuse et une écrivaine française. Elle a mené une carrière comme maître de conférence en études cinématographiques, mais s\'est fait surtout connaître d\'un public plus large par ses romans historiques pour la jeunesse, qui abordent des époques et des cultures variées.'),
+(16, 'Boulle', 'Pierre', 'Pierre Boulle, né le 20 février 19121 à Avignon et mort le 31 janvier 1994 à Paris 16e2, est un écrivain français. Agent de la France libre en Asie du Sud-Est pendant la Seconde Guerre mondiale, il est l’auteur du Pont de la rivière Kwai (1952) et de La Planète des singes (1963).'),
+(17, 'Bruneau', 'Clotilde', 'Clotilde Bruneau, née en 1987 à Paris, obtient un diplôme en arts plastiques puis étudie le cinéma en 2010 avant de participer à l\'écriture de quelques albums dans la collection « Les nouvelles aventures du Petit Prince »1 à partir de 2012.');
 
 --
 -- Contraintes pour les tables déchargées
