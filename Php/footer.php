@@ -5,7 +5,6 @@
     </div>
 
 
-        </div>
             <div class="information">
         
                 <div class=icone>
