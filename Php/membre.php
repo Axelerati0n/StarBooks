@@ -11,7 +11,7 @@
       Entrez la date d'emprunt <input type="date" name="date" placeholder="Année-mois-jour" value="<?php if (isset($_POST['date'])) echo htmlentities(trim($_POST['date'])); ?>">
                        <select name="duration" required>
                        	<?php
-$sql ="SELECT Titre FROM `livre`;";
+$sql ="SELECT Titre,isbn FROM `livre`;";
 $link = mysqli_connect($HOST , $user, $password, $database);
 if(!mysqli_set_charset($link,"utf8mb4")){//encodage  en utf8mb4
   printf(mysqli_error($link));
@@ -21,19 +21,21 @@ echo "<div class='gril'>";
 $req = mysqli_query($link,$sql);
 if ($req) {
   while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
-    $i =0;
-    echo "<option value='livre".$i."'>";
+
+    $isbn = $data["isbn"];
+    echo "<option value='$isbn'>";
+
             echo  $data["Titre"];
           echo "</option>";
           $i++;
   }
 }?>
-   
+
         </select><br>
        <input type="submit" name="submit" value="submit">
      </form>
      <?php if (isset($erreur)) echo '<br><br>',$erreur;?>
- 
+
  <?php
 
 require "config.php";
@@ -47,7 +49,7 @@ if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['email'
 		$isbn = $_POST['duration'];
 		$link = mysqli_connect($HOST , $user, $password, $database);
 
-		$sql = "INSERT INTO Reservation (login,Date,LivreIsbn) VALUES ('login','$date','$isbn')";
+		$sql = "INSERT INTO Reservation (login,Date,LivreIsbn) VALUES ('$login','$date','$isbn')";
 		$req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($link));
 		mysqli_close ($link);
 		echo "Votre r&eacuteservation a bien &eacutet&eacute prise en compte
@@ -60,4 +62,29 @@ if (isset($erreur)) echo '<br><br>',$erreur;
 ?>
 </div><br>
 </div>
+<?php
+$link = mysqli_connect($HOST , $user, $password, $database);
+if(!mysqli_set_charset($link,"utf8mb4")){//encodage  en utf8mb4
+	printf(mysqli_error($link));
+	exit();
+}
+echo "Vos Reservations : ";
+echo "<div class='gril'>";
+
+$sql = "SELECT Titre,Isbn FROM reservation JOIN livre ON Livre.isbn = reservation.livreisbn ";
+$req = mysqli_query($link,$sql);
+if ($req) {
+	while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
+		echo "<ul>";
+			 echo "<div class='ca'>";
+		  		 	echo "<a href='detail.php?isbn=" . $data['Isbn'] . "'><img src='../img/Livres/" . $data["Isbn"] . ".jpg' class='img' alt=''></a><div align='center'>";
+		  		 	echo "<p class='pc'>Titre : " . $data["Titre"] . "</p>";
+					echo "</div>";
+				echo "</div>";
+		echo "</ul>";
+	}
+}
+echo "</div>";
+
+?>
 <?php require"footer.php"?>
