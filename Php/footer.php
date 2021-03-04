@@ -3,24 +3,7 @@
         <div class="scroll_to_top">
       <a href="#top"><p id="scroll_to_top">Haut de page</p></a>
     </div>
-        <div class="bande">
-        
-                <div class=icone>
-                    <img src="<?php echo $CONFIG["root_path"] ?>img/camion.png" class = icones>
-                    <h4><strong>Une livraison rapide et gratuite</strong></h4><p>sans minimum d'achat</p>
-                </div>
-                 <div class=icone>
-                    <img src="<?php echo $CONFIG["root_path"] ?>img/cb.png" class = icones>
-                    <h4><strong>Possibilité de payer en plusieurs fois</strong></h4><p>En 2 à 3 fois</p>
-                </div>
-                 <div class=icone>
-                    <img src="<?php echo $CONFIG["root_path"] ?>img/30j.png" class = icones>
-                    <h4><strong>Satisfait ou remboursé</strong></h4><p>30 jours d'essai avant le renvoi</p>
-                </div>
-                 <div class=icone>
-                    <img src="<?php echo $CONFIG["root_path"] ?>img/service.png" class = icones>
-                     <h4><strong>Un service client plus que présent</strong></h4><p>Disponible 24h/24</p>
-            </div>
+
 
         </div>
             <div class="information">
