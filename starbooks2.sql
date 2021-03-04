@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 04 mars 2021 à 14:15
+-- Généré le : jeu. 04 mars 2021 à 14:25
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -257,6 +257,19 @@ INSERT INTO `personne` (`IdPersonne`, `Nom`, `Prenom`, `bio`) VALUES
 (15, 'Weulersse', 'Odile', 'Odile Weulersse, née le 19 avril 1938 à Neuilly-sur-Seine, est une chercheuse et une écrivaine française. Elle a mené une carrière comme maître de conférence en études cinématographiques, mais s\'est fait surtout connaître d\'un public plus large par ses romans historiques pour la jeunesse, qui abordent des époques et des cultures variées.'),
 (16, 'Boulle', 'Pierre', 'Pierre Boulle, né le 20 février 19121 à Avignon et mort le 31 janvier 1994 à Paris 16e2, est un écrivain français. Agent de la France libre en Asie du Sud-Est pendant la Seconde Guerre mondiale, il est l’auteur du Pont de la rivière Kwai (1952) et de La Planète des singes (1963).'),
 (17, 'Bruneau', 'Clotilde', 'Clotilde Bruneau, née en 1987 à Paris, obtient un diplôme en arts plastiques puis étudie le cinéma en 2010 avant de participer à l\'écriture de quelques albums dans la collection « Les nouvelles aventures du Petit Prince »1 à partir de 2012.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reservation`
+--
+
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `login` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `livreisbn` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contraintes pour les tables déchargées
