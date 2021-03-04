@@ -60,8 +60,9 @@ require "header.php";
                 echo"<h3>"."Résumé"."</h3>";
                 echo"</header>";
                 echo"<div class='infos'>";
+                echo "<li>" . $row["Resume"] . "</li>";
                 echo"</div>";
-          
+
 
 
 
@@ -74,7 +75,7 @@ require "header.php";
           ?>
 
         </ul>
-     
+
       </div>
 
 <?php require "footer.php";?>
