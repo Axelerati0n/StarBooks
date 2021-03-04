@@ -4,6 +4,7 @@ require "genre.php";?>
 
 <div class="grilindex">
 	<div class="divindex">
+	    <form name="form" action="" method="post"><br>
 		<p>Trier par titre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
