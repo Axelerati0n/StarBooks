@@ -1,5 +1,5 @@
 <?php
-$CONFIG=array("root_path"=>"/StarBooks-main/");
+$CONFIG=array("root_path"=>"/StarBooks/");
 $user = 'root';
 $password = '';
 $database = 'starbooks2';
