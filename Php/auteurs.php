@@ -27,31 +27,19 @@ require "header.php";
               while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
             $nom = $row["nom"];
-
+           
                     ?>
                         <div class='pp'>
-                          <a href='#'><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt=<?php echo $nom?> width="100%" height="100%" align=left></a>
+                        <img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt=<?php echo $nom?> width="60%" height="500px" align=left></a>
                         <?php
-                        echo"<div class='infos'>";
-                        echo "<li><strong>Nom : </strong>" . $row["nom"] . "</li>";
-                        echo "<li><strong>Prénom : </strong>" . $row["prenom"] . "</li>";
-                        echo"</div>";
-                        echo"<br>";
-                        echo"</div>";
-                         echo"<header>";
-                        echo"<h3>"."Résumé"."</h3>";
-                        echo"</header>";
-                        echo"<div class='infos'>";
-                        echo "<li>" . $row["bio"] . "</li>";
-                        echo"</div>";
+                    echo "<p><br><strong>Nom : </strong>" . $row["nom"];
+                    echo "<br><br><strong>Prénom : </strong>" . $row["prenom"] ;
+                      echo "<br><br><strong>Biographie : </strong>" . $row["bio"] . "</p>";
                     ?>
-
-                          </ul>
-                        </div>
                         </div>
                        <?php
-
-
+                
+               
 
 
               }
@@ -61,3 +49,5 @@ require "header.php";
  echo "</div>";
 ?>
 <?php require"footer.php"?>
+
+
