@@ -158,6 +158,9 @@ margin-left:  43%;
   width: 80%;
 
 }
+  .grilContact header{
+    color:white;
+  }
 .orga{
      display: grid;
   grid-template-columns:100%  ;
