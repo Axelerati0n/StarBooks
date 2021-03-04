@@ -17,7 +17,7 @@ require "header.php";
 
 
 
-           $req = "SELECT DISTINCT nom,prenom FROM livre JOIN personne ON livre.IdPersonne=personne.IdPersonne ";
+           $req = "SELECT DISTINCT nom,prenom,bio FROM livre JOIN personne ON livre.IdPersonne=personne.IdPersonne ";
 
           $result = mysqli_query($link,$req);
 
@@ -27,19 +27,31 @@ require "header.php";
               while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
             $nom = $row["nom"];
-           
+
                     ?>
                         <div class='pp'>
                           <a href='#'><img src=<?php echo "../img/auteurs/{$nom}.jpg"?> alt=<?php echo $nom?> width="100%" height="100%" align=left></a>
                         <?php
-                    echo "<p class='pres'><strong>Nom : </strong>" . $row["nom"];
-                    echo "<br><br><strong>Prénom : </strong>" . $row["prenom"] . "</p>";
-
+                        echo"<div class='infos'>";
+                        echo "<li><strong>Nom : </strong>" . $row["nom"] . "</li>";
+                        echo "<li><strong>Prénom : </strong>" . $row["prenom"] . "</li>";
+                        echo"</div>";
+                        echo"<br>";
+                        echo"</div>";
+                         echo"<header>";
+                        echo"<h3>"."Résumé"."</h3>";
+                        echo"</header>";
+                        echo"<div class='infos'>";
+                        echo "<li>" . $row["bio"] . "</li>";
+                        echo"</div>";
                     ?>
+
+                          </ul>
+                        </div>
                         </div>
                        <?php
-                
-               
+
+
 
 
               }
@@ -49,5 +61,3 @@ require "header.php";
  echo "</div>";
 ?>
 <?php require"footer.php"?>
-
-
