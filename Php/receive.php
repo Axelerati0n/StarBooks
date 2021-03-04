@@ -1,5 +1,10 @@
 
 <?php
+require "header.php";
+?>
+<div class="infosReceive">
+
+<?php
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $name = $_POST['client_name'];
    $mail = $_POST['client_mail'];
@@ -10,4 +15,8 @@
      Merci d'avoir répondu à ce petit formulaire !";
    }
  }
+ ?>
+</div>
+<?php
+ require "footer.php";
  ?>
