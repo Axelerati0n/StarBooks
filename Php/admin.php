@@ -1,12 +1,11 @@
-<?php require"header.php"?>
+<?php require"header.php";
+require "config.php"?>
 <div class="grilContact">
 <header>
 <h1>Gestion Compte :</h1>
 </header>
 <div class='infos'>
 <?php
-
-
                 echo " changer le mdp ";
             ?><form name="form" action="" method="post">
                     <p><input type="text" name="set1"  placeholder="ancien mot de passe ">
@@ -27,8 +26,6 @@
                     echo "un ou plusieur champ son vide";
                 }
              }     
-
-
 
                 echo "changer le login";
                 ?><form name="form" action="" method="post">
@@ -81,6 +78,7 @@
                 <input type="text" name="set9"  placeholder="Entrée un idPersone">
                 <input type="text" name="set10"  placeholder="Entrée un Empruntlivre">
                 <input type="text" name="set13"  placeholder="Entrée un Idmembre">
+                <input type="text" name="set13"  placeholder="Entrée un Idmembre">
                 <input type="submit" value="GO" name="go4"></p>
         </form>
         <?php   
@@ -104,33 +102,84 @@
     }
 }
 
-    echo "suprimer LIVRE";
-    ?><form name="form" action="" method="post">
+echo "<br>suprimer LIVRE";
+?><form name="form" action="" method="post">
     <p><input type="text" name="set1"  placeholder="Entrée un isbn">
-            <input type="submit" name="go5" value="GO"></p></form><?php
-            if (isset($_POST['go5']) && $_POST['go5'] == 'GO') {
-                if ( (isset($_POST['set1']) && !empty($_POST['set1']))) {
-                $set1=$_POST['set1'];
-             $sql = "DELETE FROM livre WHERE isbn='$set1';"; 
-             echo "le livre a ete suprimer";
-         }else{
-        echo "un ou plusieur champ son vide";
+    <input type="submit" name="go5" value="GO"></p>
+</form><?php
+if (isset($_POST['go5']) && $_POST['go5'] == 'GO') {
+    if ( (isset($_POST['set1']) && !empty($_POST['set1']))) {
+        $set1=$_POST['set1'];
+        $sql = "DELETE FROM livre WHERE isbn='$set1';"; 
+        echo "le livre a ete suprimer";
+    }else{
+    echo "un ou plusieur champ son vide";
     }
-     }
- ?></div><?php
-
-
-
-
-        
-   if (isset($sql) && !empty($sql)) {
-$link = mysqli_connect($HOST , $user, $password, $database);
-    $link = mysqli_connect($HOST , $user, $password, $database);
-        $req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($link));
-        mysqli_close ($link); 
-
 }
+
+
+if (isset($sql) && !empty($sql)) {
+    $link = mysqli_connect($HOST , $user, $password, $database);
+    $link = mysqli_connect($HOST , $user, $password, $database);
+    $req = mysqli_query($link,$sql) or exit('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($link));
+    mysqli_close ($link);
+}
+
+?> 
+
+ <br>Ajouter l'image du livre
+
+<form action="#upload" method='post' enctype="multipart/form-data">
+    <input type="file"  value="p" name="file"/><br>
+    <input type="submit" name="sub" value="Upload"/>
+</form>
+<?php 
+if (isset($_POST['sub']) && $_POST['sub'] == 'Upload') {
+    
+        $name= $_FILES['file']['name'];
+        $tmp_name= $_FILES['file']['tmp_name'];
+        $position= strpos($name, ".");
+        $fileextension= substr($name, $position + 1);
+        $fileextension= strtolower($fileextension);
+        if (isset($name)) {
+            $path= '../img/Livres/';
+                if (empty($name)) {
+                    echo "choisir une image";
+                }else if (!empty($name)){
+                    if ($fileextension !== "jpg")  {
+                         echo "l'extention de l'image dois etre .jpg<";
+                    }else if ($fileextension == "jpg")  {
+                         if (move_uploaded_file($tmp_name, $path.$name)) {
+                         echo 'votre image a bien ete enregistre';
+                        }
+                    }
+                }
+        }
+    
+}
+
+
+
+?><div class='infos'>
+suprimer une image
+
+<form name="form" action="" method="post">
+    <p><input type="text" name="rm"  placeholder="Entrée un isbn">
+    <input type="submit" name="gr" value="suprimer"></p>
+</form>
+<?php
+if (isset($_POST['gr']) && $_POST['gr'] == 'suprimer') {
+    if (isset($_POST['rm']) &&  !empty($_POST['rm'])) {
+        if (file_exists("../img/Livres/".$_POST['rm'].".jpg")){
+        unlink ("../img/Livres/".$_POST['rm'].".jpg"); 
+        }else{echo "ce fichier n'existe pas";}
+    }else{echo "saisir un nom ";
+    }
+     
+}
+
 ?>
+
 </div>
 </div>
 </div>
