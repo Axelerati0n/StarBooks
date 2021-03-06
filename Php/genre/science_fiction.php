@@ -1,9 +1,9 @@
 <?php require "../header.php";
 require "../genre.php";?>
-	<input  name="trie" type="submit" value="" ><!-- jsais pas pk mais avec ça ça marchee-->
+<br>
+
 <div class="grilindex">
 	<div class="divindex">
-	<form name="form" action="" method="post"><br>
 		<p>Trier par titre :</p>
 	
        	<input  name="trie" type="submit" value="Décroissant">
@@ -23,18 +23,18 @@ if (empty($_POST['search'])) {$search=NULL;
 }
 if (empty($tri)) {
 	if (empty($search)) { // si la barre de recherceh ne contien rien 
-		$sql = "SELECT titre,isbn FROM livre WHERE IdGenre=6";/* a changer le nom de la table */
+		$sql = "SELECT Titre,Isbn FROM livre WHERE IdGenre=6";/* a changer le nom de la table */
    	}else {/* si la barre de recherche contien des chose  */
-		$sql = " SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne WHERE titre LIKE '%$search%' or prenom LIKE '%$search%' or annee LIKE '%$search%'; ";
+		$sql = "SELECT Titre,Isbn FROM livre JOIN editeur e ON e.IdEditeur = livre.IdEditeur JOIN personne p ON p.IdPersonne = livre.IdPersonne WHERE Titre LIKE '%$search%' or Prenom LIKE '%$search%' or Nom LIKE '%$search%'or Annee LIKE '%$search%' AND IdGenre=6; ";
 	}
 			//$sql = " SELECT isbn,titre,prenom,libelle,annee,editeur,nom FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne JOIN genre g ON g.id = livre.genre  ORDER BY genre;"; // requete pour trier par genre a changer
 }else{
 	switch ($tri) {
 	case 'Croissant':
-		$sql ='SELECT titre,isbn FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre ASC;';// requete pour tier par ordre  croisant des titre
+		$sql ='SELECT Titre,Isbn FROM livre JOIN editeur e ON e.IdEditeur = livre.IdEditeur JOIN personne p ON p.IdPersonne = livre.IdPersonne WHERE IdGenre=6 ORDER BY titre ASC ;';// requete pour tier par ordre  croisant des titre
 		break;
 	case 'Décroissant':
-		$sql = ' SELECT isbn,titre FROM livre JOIN editeur e ON e.id = livre.editeur JOIN auteur a ON a.idLivre = livre.isbn JOIN personne p ON p.id = a.idPersonne ORDER BY titre DESC;';// requete pour trier par ordre decroisant 
+		$sql = 'SELECT Isbn,Titre FROM livre JOIN editeur e ON e.IdEditeur = livre.IdEditeur JOIN personne p ON p.IdPersonne = livre.IdPersonne WHERE IdGenre=6 ORDER BY titre DESC;';// requete pour trier par ordre decroisant 
 		break;
 	}
 }
@@ -49,8 +49,8 @@ if ($req) {
 	while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){
 		echo "<ul>";
 			 echo "<div class='ca'>";
-		  		 	echo "<a href='../detail.php?isbn=" . $data['isbn'] . "'><img src='../../img/Livres/" . $data["isbn"] . ".jpg' class='img' alt=''></a><div align='center'>";
-		  		 	echo "<p class='pc'>Titre : " . $data["titre"] . "</p>";
+		  		 	echo "<a href='../detail.php?isbn=" . $data['Isbn'] . "'><img src='../../img/Livres/" . $data["Isbn"] . ".jpg' class='img' alt=''></a><div align='center'>";
+		  		 	echo "<p class='pc'>Titre : " . $data["Titre"] . "</p>";
 					echo "</div>";
 				echo "</div>";
 		echo "</ul>";
