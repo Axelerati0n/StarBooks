@@ -78,7 +78,6 @@ require "config.php"?>
                 <input type="text" name="set9"  placeholder="Entrez un idPersonne">
                 <input type="text" name="set10"  placeholder="Entrez un Empruntlivre">
                 <input type="text" name="set13"  placeholder="Entrez un Idmembre">
-                <input type="text" name="set13"  placeholder="Entrez un Idmembre">
                 <input type="submit" value="GO" name="go4"></p>
         </form>
         <?php   
