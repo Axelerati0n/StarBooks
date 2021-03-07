@@ -11,7 +11,7 @@
                 </ul>
                 <ul class="bonsoir">
                     <a href="<?php echo $CONFIG["root_path"] ?>Php/genre/manga.php"><li class="manga">Manga</li></a>
-                    <a href="<?php echo $CONFIG["root_path"] ?>Php/genre/medieval.php"><li class="medieval">Médévial</li></a>
+                    <a href="<?php echo $CONFIG["root_path"] ?>Php/genre/medieval.php"><li class="medieval">Médiéval</li></a>
                 </ul>
                 <ul class="bonsoir">
                     <a href="<?php echo $CONFIG["root_path"] ?>Php/genre/mythologie.php"><li class="mythologie">Mythologie</li></a>
