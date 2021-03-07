@@ -1,4 +1,4 @@
-<?php require"header.php";
+<?php require "header.php";
 require "config.php"?>
 <div class="grilContact">
 <header>
@@ -6,10 +6,10 @@ require "config.php"?>
 </header>
 <div class='infos'>
 <?php
-                echo " changer le mdp ";
+                echo "Changer le mdp";
             ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1"  placeholder="ancien mot de passe ">
-                        <input type="text" name="set2"  placeholder="nouveaux mot de passe">
+                    <p><input type="text" name="set1"  placeholder="Ancien mot de passe ">
+                        <input type="text" name="set2"  placeholder="Nouveau mot de passe">
             <input type="submit" name="go1" value="GO"></p></form><?php
             if (isset($_POST['go1']) && $_POST['go1'] == 'GO') {
                 if ( (isset($_POST['set2']) && !empty($_POST['set2'])) && ( (isset($_POST['set1']) && !empty($_POST['set2'])))) {
@@ -20,17 +20,17 @@ require "config.php"?>
                 $sql = "UPDATE membre SET mdp ='$set2' WHERE mdp='$set1';"; 
                 echo $sql;
             }else {
-                echo "le compte admin ne peut pas chnange de login";
+                echo "Le compte admin ne peut pas changer le mot de passe";
             }
                 }else{
-                    echo "un ou plusieur champ son vide";
+                    echo "Un ou plusieurs champs sont vides";
                 }
              }     
 
-                echo "changer le login";
+                echo "Changer le login";
                 ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1" placeholder="ancien login">
-                        <input type="text" name="set2"  placeholder="nouveaux mot de login">
+                    <p><input type="text" name="set1" placeholder="Ancien login">
+                        <input type="text" name="set2"  placeholder="Nouveau login">
             <input type="submit" name="go2" value="GO"></p></form><?php
             if (isset($_POST['go2']) && $_POST['go2'] == 'GO') {
                 if ( (isset($_POST['set1']) && !empty($_POST['set1']))  && (isset($_POST['set2']) && !empty($_POST['set2'])) ) { 
@@ -38,11 +38,11 @@ require "config.php"?>
                     $set2=$_POST['set2'];
             $sql="UPDATE membre SET  login='$set2' WHERE login='$set1';";
         }else{
-        echo "un ou plusieur champ son vide";
+        echo "Un ou plusieurs champs sont vides";
         }
-    }echo "Suprimer un compte";
+    }echo "Supprimer un compte";
             ?><form name="form" action="" method="post">
-            <p><input type="text" name="set1" placeholder="entre un mot de passe">
+            <p><input type="text" name="set1" placeholder="Entrez un mot de passe">
             <input type="submit" name ="go3"value="GO"></p></form>
 
             <?php
@@ -52,7 +52,7 @@ require "config.php"?>
                     $sql = " DELETE FROM membre WHERE mdp='$set1';";
 
         }else{
-        echo "un ou plusieur champ son vide";
+        echo "Un ou plusieurs champs sont vides";
     }
     }
 
@@ -65,20 +65,20 @@ require "config.php"?>
 <div class='infos'>
 
  
-       <?php echo "ajouter un  livre";?>
+       <?php echo "Ajouter un  livre";?>
             <form name="test" action="" method="post">
-                <p><input type="text" name="set2"  placeholder="Entrée un nbpage">
-                <input type="text" name="set1"  placeholder="Entrée un idlangue">
-                <input type="text" name="set3"  placeholder="Entrée un idEditeur">
-                <input type="text" name="set4"  placeholder="Entrée un titre">
-                <input type="text" name="set5"  placeholder="Entrée un ISBN">
-                <input type="text" name="set6"  placeholder="Entrée un annee">
-                <input type="text" name="set7"  placeholder="Entrée un idgenre">
-                <input type="text" name="set12"  placeholder="Entrée un resumer">
-                <input type="text" name="set9"  placeholder="Entrée un idPersone">
-                <input type="text" name="set10"  placeholder="Entrée un Empruntlivre">
-                <input type="text" name="set13"  placeholder="Entrée un Idmembre">
-                <input type="text" name="set13"  placeholder="Entrée un Idmembre">
+                <p><input type="text" name="set2"  placeholder="Entrez un nbpage">
+                <input type="text" name="set1"  placeholder="Entrez un idlangue">
+                <input type="text" name="set3"  placeholder="Entrez un idEditeur">
+                <input type="text" name="set4"  placeholder="Entrez un titre">
+                <input type="text" name="set5"  placeholder="Entrez un ISBN">
+                <input type="text" name="set6"  placeholder="Entrez une année">
+                <input type="text" name="set7"  placeholder="Entrez un idgenre">
+                <input type="text" name="set12"  placeholder="Entrez un résumé">
+                <input type="text" name="set9"  placeholder="Entrez un idPersonne">
+                <input type="text" name="set10"  placeholder="Entrez un Empruntlivre">
+                <input type="text" name="set13"  placeholder="Entrez un Idmembre">
+                <input type="text" name="set13"  placeholder="Entrez un Idmembre">
                 <input type="submit" value="GO" name="go4"></p>
         </form>
         <?php   
@@ -96,24 +96,24 @@ require "config.php"?>
                     $set12 = $_POST['set12'];
                     $set13 = $_POST['set13'];
         $sql ="INSERT INTO livre (Isbn, Titre, Annee, Nbpages, Resume, EmpruntLivre, IdPersonne, IdEditeur, IdGenre, IdLangue, idmembre) VALUES ('$set5', '$set4', '$set6', '$set1', '$set12', '$set10', '$set9', '$set3', '$set7', '$set1', '$set13')";
-        echo "le livre a ete ajouter";?><br><?php
+        echo "Le livre a été ajouté";?><br><?php
     }else{
-        echo "un ou plusieur champ son vide";
+        echo "Un ou plusieurs champs sont vides";
     }
 }
 
-echo "<br>suprimer LIVRE";
+echo "<br>Supprimer un Livre";
 ?><form name="form" action="" method="post">
-    <p><input type="text" name="set1"  placeholder="Entrée un isbn">
+    <p><input type="text" name="set1"  placeholder="Entrez un isbn">
     <input type="submit" name="go5" value="GO"></p>
 </form><?php
 if (isset($_POST['go5']) && $_POST['go5'] == 'GO') {
     if ( (isset($_POST['set1']) && !empty($_POST['set1']))) {
         $set1=$_POST['set1'];
         $sql = "DELETE FROM livre WHERE isbn='$set1';"; 
-        echo "le livre a ete suprimer";
+        echo "Le livre a été supprimé";
     }else{
-    echo "un ou plusieur champ son vide";
+    echo "Un ou plusieurs champs sont vides";
     }
 }
 
@@ -144,13 +144,13 @@ if (isset($_POST['sub']) && $_POST['sub'] == 'Upload') {
         if (isset($name)) {
             $path= '../img/Livres/';
                 if (empty($name)) {
-                    echo "choisir une image";
+                    echo "Choisir une image";
                 }else if (!empty($name)){
                     if ($fileextension !== "jpg")  {
-                         echo "l'extention de l'image dois etre .jpg<";
+                         echo "L'extention de l'image doit être .jpg";
                     }else if ($fileextension == "jpg")  {
                          if (move_uploaded_file($tmp_name, $path.$name)) {
-                         echo 'votre image a bien ete enregistre';
+                         echo 'Votre image a bien été enregistrée';
                         }
                     }
                 }
@@ -161,10 +161,10 @@ if (isset($_POST['sub']) && $_POST['sub'] == 'Upload') {
 
 
 ?><div class='infos'>
-suprimer une image
+Supprimer une image
 
 <form name="form" action="" method="post">
-    <p><input type="text" name="rm"  placeholder="Entrée un isbn">
+    <p><input type="text" name="rm"  placeholder="Entrez un isbn">
     <input type="submit" name="gr" value="suprimer"></p>
 </form>
 <?php
@@ -172,8 +172,8 @@ if (isset($_POST['gr']) && $_POST['gr'] == 'suprimer') {
     if (isset($_POST['rm']) &&  !empty($_POST['rm'])) {
         if (file_exists("../img/Livres/".$_POST['rm'].".jpg")){
         unlink ("../img/Livres/".$_POST['rm'].".jpg"); 
-        }else{echo "ce fichier n'existe pas";}
-    }else{echo "saisir un nom ";
+        }else{echo "Ce fichier n'existe pas";}
+    }else{echo "Saisir un nom ";
     }
      
 }
@@ -183,4 +183,4 @@ if (isset($_POST['gr']) && $_POST['gr'] == 'suprimer') {
 </div>
 </div>
 </div>
-<?php require"footer.php"?>
+<?php require "footer.php"?>
