@@ -22,7 +22,9 @@
     		<ul>
           <div class="bouton2">
           <?php
+
         			session_start();
+              
         			if (isset($_SESSION['login'])) {?>   <!-- si  login n'est pas null allor la persoone est connecter-->
 
         				<li><a class=bouton href="<?php echo $CONFIG['root_path'] ?>Php/deco.php"><img src="<?php echo $CONFIG['root_path'] ?>img/deco.png" class="conn" align=middle>Deconnexion</a></li>
