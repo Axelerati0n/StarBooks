@@ -1,5 +1,8 @@
-<?php require "header.php";
-require "genre.php";?>
+<?php require "header.php";?>
+<div id="js-cookie-box" class="cookie-box">
+    En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies 🍪 ! <button id="js-cookie-button" class="cookie-button" onclick="hideCookieBox()">Allez pourquoi pas</button>
+</div>
+<?php require "genre.php";?>
 <br>
 
 <div class="grilindex">
