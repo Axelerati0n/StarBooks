@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="<?php echo $CONFIG["root_path"] ?>Css/style.css">
   <link rel="shortcut icon" type="image/png" href="<?php echo $CONFIG["root_path"] ?>img/logo.png">
+  <script src='../js/script.js' type="text/javascript" language="javascript"></script>
   <title>StarBooks</title>
 </head>
 <body>
