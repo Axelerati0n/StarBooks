@@ -1,4 +1,4 @@
-<?php require "header.php";?>
+<?php require "header.php"; ?>
 <div class="grilContact">
 <header>
 <h1>Gestion Compte :</h1>
@@ -9,71 +9,71 @@
  src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <?php
 $eeee= date('Y-m-d H:i:s');
-
-                echo "Changer le mdp";
-            ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1"  placeholder="Ancien mot de passe ">
-                        <input type="text" name="set2"  placeholder="Nouveau mot de passe">
-            <input type="submit" name="go1" value="GO"></p></form><?php
-            if (isset($_POST['go1']) && $_POST['go1'] == 'GO') {
-                if ( (isset($_POST['set2']) && !empty($_POST['set2'])) && ( (isset($_POST['set1']) && !empty($_POST['set2'])))) {
-                    $set1=md5($_POST['set1']);
+if (isset($_SESSION['login'])) {
+    if($_SESSION['login'] == "admin") {
+        echo "Changer le mdp";
+        ?><form name="form" action="" method="post">
+            <p><input type="text" name="set1"  placeholder="Ancien mot de passe ">
+            <input type="text" name="set2"  placeholder="Nouveau mot de passe">
+            <input type="submit" name="go1" value="GO"></p>
+        </form><?php
+        if (isset($_POST['go1']) && $_POST['go1'] == 'GO') {
+            if ( (isset($_POST['set2']) && !empty($_POST['set2'])) && ( (isset($_POST['set1']) && !empty($_POST['set2'])))) {
+                $set1=md5($_POST['set1']);
                     $set2=md5($_POST['set2']);
-                $sql = "UPDATE membre SET mdp ='$set2' WHERE mdp='$set1';"; 
-                $sql2 = "SELECT idmembre FROM membre WHERE mdp='$set2'";
-                echo " le mot de passe  a &eacute;t&eacute; chang&eacute<br>;";
-                if (isset($sql) && !empty($sql2)) {
-                $link = mysqli_connect($HOST , $user, $password, $database);
-                $req = mysqli_query($link,$sql2) or exit('Erreur SQL !<br />'.$sql2.'<br />'.mysqli_error($link));
-                 while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){ 
-                    $es=$data['idmembre'];
-                    mysqli_close ($link);}
-                # Chemin vers fichier texte
-                $file ="EZ.txt";
-                # Ouverture en mode écriture
-                $fileopen=(fopen("$file",'a'));
-                # Ecriture de "Début du fichier" dansle fichier texte
-                echo $data['idmembre'];
-                fwrite($fileopen,$eeee. "update mdp ".$es."\r");
-                # On ferme le fichier proprement
-                fclose($fileopen);
-                }
-
-
-                }else{
-                    echo "Un ou plusieurs champs sont vides";
-                }
-             }     
-
-                echo "Changer le login";
-                ?><form name="form" action="" method="post">
-                    <p><input type="text" name="set1" placeholder="Ancien login">
-                        <input type="text" name="set2"  placeholder="Nouveau login">
-            <input type="submit" name="go2" value="GO"></p></form><?php
-            if (isset($_POST['go2']) && $_POST['go2'] == 'GO') {
-                if ( (isset($_POST['set1']) && !empty($_POST['set1']))  && (isset($_POST['set2']) && !empty($_POST['set2'])) ) { 
-                    $set1=$_POST['set1'];
-                    $set2=$_POST['set2'];
-            $sql="UPDATE membre SET  login='$set2' WHERE login='$set1';";
-                $sql2 = "SELECT idmembre FROM membre WHERE login='$set1'";
-                echo " le mot de passe  a &eacute;t&eacute; chang&eacute<br>;";
-                if (isset($sql) && !empty($sql2)) {
-                $link = mysqli_connect($HOST , $user, $password, $database);
-                $req = mysqli_query($link,$sql2) or exit('Erreur SQL !<br />'.$sql2.'<br />'.mysqli_error($link));
-                 while($data = mysqli_fetch_array($req, MYSQLI_ASSOC))
-                    $es=$data['idmembre'];
-                    mysqli_close ($link);
-                # Chemin vers fichier texte
-                $file ="EZ.txt";
-                # Ouverture en mode écriture
-                $fileopen=(fopen("$file",'a'));
-                # Ecriture de "Début du fichier" dansle fichier texte
-                echo $data['idmembre'];
-                fwrite($fileopen,$eeee. "update Login ".$es."\r");
-                # On ferme le fichier proprement
-                fclose($fileopen);
-                }
-
+                    $sql = "UPDATE membre SET mdp ='$set2' WHERE mdp='$set1';"; 
+                    $sql2 = "SELECT idmembre FROM membre WHERE mdp='$set2'";
+                    echo " le mot de passe  a &eacute;t&eacute; chang&eacute<br>;";
+                    if (isset($sql) && !empty($sql2)) {
+                        $link = mysqli_connect($HOST , $user, $password, $database);
+                        $req = mysqli_query($link,$sql2) or exit('Erreur SQL !<br />'.$sql2.'<br />'.mysqli_error($link));
+                        while($data = mysqli_fetch_array($req, MYSQLI_ASSOC)){ 
+                            $es=$data['idmembre'];
+                            mysqli_close ($link);
+                        }
+                        # Chemin vers fichier texte
+                        $file ="EZ.txt";
+                        # Ouverture en mode écriture
+                        $fileopen=(fopen("$file",'a'));
+                        # Ecriture de "Début du fichier" dansle fichier texte
+                        echo $data['idmembre'];
+                        fwrite($fileopen,$eeee. "update mdp ".$es."\r");
+                        # On ferme le fichier proprement
+                        fclose($fileopen);
+                    }
+            }else{
+                echo "Un ou plusieurs champs sont vides";
+            }
+        }     
+        echo "Changer le login";
+            ?><form name="form" action="" method="post">
+                <p><input type="text" name="set1" placeholder="Ancien login">
+                <input type="text" name="set2"  placeholder="Nouveau login">
+                <input type="submit" name="go2" value="GO"></p></form><?php
+                if (isset($_POST['go2']) && $_POST['go2'] == 'GO') {
+                    if ( (isset($_POST['set1']) && !empty($_POST['set1']))  && (isset($_POST['set2']) && !empty($_POST['set2'])) ) { 
+                        $set1=$_POST['set1'];
+                        $set2=$_POST['set2'];
+                        $sql="UPDATE membre SET  login='$set2' WHERE login='$set1';";
+                        $sql2 = "SELECT idmembre FROM membre WHERE login='$set1'";
+                        echo " le mot de passe  a &eacute;t&eacute; chang&eacute<br>;";
+                        if (isset($sql) && !empty($sql2)) {
+                            $link = mysqli_connect($HOST , $user, $password, $database);
+                            $req = mysqli_query($link,$sql2) or exit('Erreur SQL !<br />'.$sql2.'<br />'.mysqli_error($link));
+                            while($data = mysqli_fetch_array($req, MYSQLI_ASSOC))
+                                $es=$data['idmembre'];
+                                mysqli_close ($link);
+                            }
+                            # Chemin vers fichier texte
+                            $file ="EZ.txt";
+                            # Ouverture en mode écriture
+                            $fileopen=(fopen("$file",'a'));
+                            # Ecriture de "Début du fichier" dansle fichier texte
+                            echo $data['idmembre'];
+                            fwrite($fileopen,$eeee. "update Login ".$es."\r");
+                            # On ferme le fichier proprement
+                            fclose($fileopen);
+                            }
             echo "le login a bien ete chang&eacute;<br>";
         }else{
         echo "Un ou plusieurs champs sont vides";
@@ -250,27 +250,23 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
-} else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file  has been uploaded.";
-                 # Chemin vers fichier texte
-            $file ="EZ.txt";
-            # Ouverture en mode écriture
-            $fileopen=(fopen("$file",'a'));
-             # Ecriture de "Début du fichier" dansle fichier texte
-            echo $data['idmembre'];
-            fwrite($fileopen,$eeee. "ADD IMG ".$target_file."\r");
-            # On ferme le fichier proprement
-            fclose($fileopen);
-  } else {
-    echo "Sorry, there was an error uploading your file.";
-  }
+}else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file  has been uploaded.";
+        # Chemin vers fichier texte
+        $file ="EZ.txt";
+        # Ouverture en mode écriture
+        $fileopen=(fopen("$file",'a'));
+        # Ecriture de "Début du fichier" dansle fichier texte
+        echo $data['idmembre'];
+        fwrite($fileopen,$eeee. "ADD IMG ".$target_file."\r");
+        # On ferme le fichier proprement
+        fclose($fileopen);
+    }else {echo "Sorry, there was an error uploading your file.";}
+    }
 }
-}
-
 ?><div class='infos'>
 Supprimer une image
-
 <form name="form" action="" method="post">
     <p><input type="text" name="rm"  placeholder="Entrez un isbn">
     <input type="submit" name="gr" value="suprimer"></p>
@@ -290,8 +286,7 @@ if (isset($_POST['gr']) && $_POST['gr'] == 'suprimer') {
             fclose($fileopen);
         }else{echo "Ce fichier n'existe pas";}
     }else{echo "Saisir un nom ";
-    }
-     
+    }   
 }
 if (isset($sql) && !empty($sql)) {
     $link = mysqli_connect($HOST , $user, $password, $database);
@@ -299,8 +294,10 @@ if (isset($sql) && !empty($sql)) {
     mysqli_close ($link);
 }
 ?>
-
 </div>
 </div>
 </div>
-<?php require "footer.php"?>
+    <?php require "footer.php";
+    }else{echo "vous n'avez pas les droit pour acceder a cette page";}
+ ?></div></div></div><?php require "footer.php";
+?>
