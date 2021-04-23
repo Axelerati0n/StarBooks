@@ -1,8 +1,8 @@
 <?php
-$CONFIG=array("root_path"=>"/StarBooks/");
+$CONFIG=array("root_path"=>"/");
 $user = 'ipssisqstarbooks';
 $password = 'b27KPjGnx79T4';
-$database = 'starbooks2';
-$port = 3306;
-$HOST = "ipssisqlstarbooks.mysql.db";
+$database = 'ipssisqstarbooks';
+$port = 21;
+$HOST = "ipssisqstarbooks.mysql.db";
 ?>

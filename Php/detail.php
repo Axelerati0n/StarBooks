@@ -1,13 +1,12 @@
 <?php $page_title="secondaire";
 require "header.php";
 ?>
-<?php require "config.php";?>
 
 <div class='grildetail'>
 
     <?php
 
-        $link = mysqli_connect("localhost", "root", "", $database);
+        $link = mysqli_connect($HOST , $user, $password, $database);
         if(!mysqli_set_charset($link,"utf8mb4")){
             printf("erreur lors du chargement du jeu de caractere utf8mb4 : %s\n", mysqli_error($link));
             exit();

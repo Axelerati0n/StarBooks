@@ -124,7 +124,7 @@ if (isset($_POST['envoye']))
         <div class="infos">
         <label for="duration"><font color=" white" class="style">Votre livre préférée:</font></label><br>
         <select name="duration" required>
-<?php require "config.php";
+<?php 
 $sql ="SELECT Titre FROM `livre`;";
 $link = mysqli_connect($HOST , $user, $password, $database);
 if(!mysqli_set_charset($link,"utf8mb4")){//encodage  en utf8mb4

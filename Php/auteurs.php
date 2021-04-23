@@ -1,5 +1,6 @@
 <?php $page_title="secondaire";
 require "header.php";
+
 ?>
 
 
@@ -7,9 +8,9 @@ require "header.php";
     <?php
          echo "<div class='block'>";
 
-        $link = mysqli_connect("localhost", "root", "", "starbooks2");
+        $link = mysqli_connect($HOST , $user, $password, $database);
         if(!mysqli_set_charset($link,"utf8mb4")){
-            printf("erreur lors du chargement du jeu de caractere utf8mb4 : %s\n", mysqli_error($link));
+            printf("erreur lors du chargement du jeu de caractere utf8mb4 : %s\n", mysqli_connect_error(),);
             exit();
         }
 
