@@ -304,7 +304,7 @@ a{
 }
 /*Genre*/
 .bd{
-  background-image: url(../img/fonds/bd.PNG);
+  background-image: url(../img/Fonds/bd.PNG);
   width: 40%;
   text-align: center;
   float: right;
@@ -321,7 +321,7 @@ a{
   font-size: xx-large;
 }
 .aventure{
-  background-image: url(../img/fonds/aventure.PNG);
+  background-image: url(../img/Fonds/aventure.PNG);
   width: 40%;
   text-align: center;
   float: left;
@@ -338,7 +338,7 @@ a{
   font-size: xx-large;
 
 }.fantastique{
-  background-image: url(../img/fonds/fantastique.PNG);
+  background-image: url(../img/Fonds/fantastique.PNG);
   width: 40%;
   text-align: center;
   padding: 25px 0;
@@ -354,7 +354,7 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.horreur{
-  background-image: url(../img/fonds/horreur.PNG);
+  background-image: url(../img/Fonds/horreur.PNG);
   width: 40%;
   text-align: center;
   float: right;
@@ -370,7 +370,7 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.medieval{
-  background-image: url(../img/fonds/medieval.PNG);
+  background-image: url(../img/Fonds/medieval.PNG);
   width: 40%;
   text-align: center;
   padding: 25px 0;
@@ -386,7 +386,7 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.manga{
-  background-image: url(../img/fonds/manga.PNG);
+  background-image: url(../img/Fonds/manga.PNG);
   width: 40%;
   text-align: center;
   float: left;
@@ -402,7 +402,7 @@ a{
   -webkit-text-stroke-color: darkgreen;
   font-size: xx-large;
 }.mythologie{
-  background-image: url(../img/fonds/mythologie.PNG);
+  background-image: url(../img/Fonds/mythologie.PNG);
   width: 40%;
   text-align: center;
   padding: 25px 0;
@@ -420,7 +420,7 @@ a{
   font-size: xx-large;
 
 }.science{
-  background-image: url(../img/fonds/science.PNG);
+  background-image: url(../img/Fonds/science.PNG);
   width: 40%;
   text-align: center;
   float: right;
@@ -448,6 +448,10 @@ a{
   padding-bottom: 10px;
   color: rgb(39, 129, 39);
 
+}
+
+.g{
+  position: flex;
 }
 .bonsoir{
   list-style: none;
